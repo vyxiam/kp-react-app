@@ -1,0 +1,8 @@
+{
+  "name": "@kp-react-app/kp-portfolio-web",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "kp-portfolio-web"
+  }
+}
