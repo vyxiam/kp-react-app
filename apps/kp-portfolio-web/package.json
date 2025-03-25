@@ -4,5 +4,9 @@
   "private": true,
   "nx": {
     "name": "kp-portfolio-web"
+  },
+  "devDependencies": {
+    "@types/i18next": "^12.1.0",
+    "@types/react-i18next": "^7.8.3"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "lang.en": "English",
+  "lang.fr": "France",
+  "lang.vi": "Vietnamese",
+  "nav.item.home": "Home",
+  "nav.item.about.me": "About me",
+  "nav.item.projects": "Projects",
+  "nav.about.summary.title": "Summary",
+  "nav.about.summary.description": "Summary about myself a.k.a Resume",
+  "nav.about.experience.title": "Experience",
+  "nav.about.experience.description": "Detailed about my past experience",
+  "nav.about.skills.title": "Skills",
+  "nav.about.skills.description": "Detailed about my skills",
+  "nav.projects.content.page.title": "About this page",
+  "nav.projects.content.page.description": "Detailed about this page including technology, development,...",
+  "nav.projects.content.freelance.title": "Freelance",
+  "nav.projects.content.freelance.description": "Detailed about each project I have worked on"
+}

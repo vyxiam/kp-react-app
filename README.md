@@ -31,6 +31,11 @@ To see all available targets to run for a project, run:
 npx nx show project kp-portfolio-web
 ```
 
+To generate new component, run:
+```sh
+nx g @nx/react:component src/app/components/home/home --style=css
+```
+
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
@@ -44,7 +49,7 @@ Use the plugin's generator to create new projects.
 To generate a new application, use:
 
 ```sh
-npx nx g @nx/react:app demo
+npx nx g @nx/react:app kp-karport-win --directory=apps/kp-karport-win
 ```
 
 To generate a new library, use:
