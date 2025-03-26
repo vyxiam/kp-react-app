@@ -1,7 +1,7 @@
 {
   "lang.en": "English",
   "lang.fr": "France",
-  "lang.vi": "Vietnamese",
+  "lang.select.lang": "Select Language",
   "nav.item.home": "Home",
   "nav.item.about.me": "About me",
   "nav.item.projects": "Projects",

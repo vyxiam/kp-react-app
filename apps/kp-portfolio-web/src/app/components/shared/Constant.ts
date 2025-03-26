@@ -52,7 +52,6 @@ const NAV_PROJECT_CONTENTS: NavContent[] = [
 export const NAV_PROPS: KPNavBarProps = {items: NAV_ITEMS, contents: [null, NAV_ABOUT_CONTENTS, NAV_PROJECT_CONTENTS]}
 
 export const LANGUAGES: LanguageDetail[] = [
-  generateLanguageDetail({language: 'lang.en'}),
-  generateLanguageDetail({language: 'lang.fr'}),
-  generateLanguageDetail({language: 'lang.vi'})
+  generateLanguageDetail({code: "EN", language: 'lang.en'}),
+  generateLanguageDetail({code: "FR", language: 'lang.fr'})
 ]

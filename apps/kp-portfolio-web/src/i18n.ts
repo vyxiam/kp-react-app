@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationEN from './assets/en.json'
-import translationVI from './assets/vi.json'
+import translationFR from './assets/fr.json'
 
 //https://www.youtube.com/watch?v=dltHi9GWMIo
 i18n
@@ -17,8 +17,8 @@ i18n
     en:{
       translation: translationEN
     },
-    vi:{
-      translation: translationVI
+    fr:{
+      translation: translationFR
     }
   }
 })

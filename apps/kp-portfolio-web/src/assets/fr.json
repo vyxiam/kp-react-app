@@ -1,0 +1,18 @@
+{
+  "lang.en": "Anglais",
+  "lang.fr": "France",
+  "lang.select.lang": "Sélectionner la langue",
+  "nav.item.home": "Accueil",
+  "nav.item.about.me": "À propos de moi",
+  "nav.item.projects": "Projets",
+  "nav.about.summary.title": "Résumé",
+  "nav.about.summary.description": "Résumé de moi (CV)",
+  "nav.about.experience.title": "Expérience",
+  "nav.about.experience.description": "Détails sur mon expérience passée",
+  "nav.about.skills.title": "Compétences",
+  "nav.about.skills.description": "Détails sur mes compétences",
+  "nav.projects.content.page.title": "À propos de cette page",
+  "nav.projects.content.page.description": "Détails sur cette page, y compris Technologie, développement,...",
+  "nav.projects.content.freelance.title": "Freelance",
+  "nav.projects.content.freelance.description": "Informations détaillées sur chaque projet sur lequel j'ai travaillé"
+}
