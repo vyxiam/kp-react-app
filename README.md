@@ -10,6 +10,39 @@
 
 [Click here to finish setting up your workspace!](https://cloud.nx.app/connect/S7OsMzCYER)
 
+## To use library with shadcn/ui
+Follow instruction to install shadcn/ui
+```html
+https://ui.shadcn.com/docs/installation/vite
+```
+
+Confirm `package.json` has the following dependencies
+```html
+"dependencies": {
+    "@tailwindcss/postcss": "^4.0.16",
+    "@tailwindcss/vite": "^4.0.16",
+...
+},
+"devDependencies": {
+...
+  "postcss": "8.4.38",
+  "prettier": "^3.5.3",
+  "prettier-plugin-tailwindcss": "^0.6.11",
+  "tailwindcss": "^4.0.5",
+  "tailwind-merge": "^3.0.2",
+  "tailwindcss-animate": "^1.0.7",
+...
+}
+```
+
+Inside `postcss.config.js`, change the content into this
+```html
+module.exports = {
+  plugins: [
+    require('@tailwindcss/postcss'),
+  ]
+};
+```
 
 ## Run tasks
 
