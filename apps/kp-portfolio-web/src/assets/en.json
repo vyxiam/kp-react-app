@@ -14,5 +14,18 @@
   "nav.projects.content.page.title": "About this page",
   "nav.projects.content.page.description": "Detailed about this page including technology, development,...",
   "nav.projects.content.freelance.title": "Freelance",
-  "nav.projects.content.freelance.description": "Detailed about each project I have worked on"
+  "nav.projects.content.freelance.description": "Detailed about each project I have worked on",
+  "home.welcome.to": "Welcome to",
+  "home.my.site": "My personal website",
+  "home.welcome.description": "I'm a passionate <strong>Full Stack Developer</strong> with a keen eye for crafting dynamic and efficient web applications.\nThis site serves as a personal project to showcase my experience, skills, and the work I’ve done over the years.",
+  "home.primary.button": "My experience",
+  "home.secondary.button": "Freelance Projects",
+  "highlights.card.full.stack.title": "Full-stack developer",
+  "highlights.card.full.stack.description": "Harness the power of machine learning to derive actionable insights from your data.",
+  "highlights.card.multi.language.title": "Multiple coding languages",
+  "highlights.card.multi.language.description": "Harness the power of machine learning to derive actionable insights from your data.",
+  "highlights.card.adaptability.collaboration.title": "Adaptability and Collaboration",
+  "highlights.card.adaptability.collaboration.description": "Harness the power of machine learning to derive actionable insights from your data.",
+  "highlights.card.problem.solving.title": "Problem-solving and critical thinking",
+  "highlights.card.problem.solving.description": "Harness the power of machine learning to derive actionable insights from your data."
 }

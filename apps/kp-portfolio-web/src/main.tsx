@@ -17,10 +17,8 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <I18nextProvider i18n={i18n}>
-        <>
           <KPHeader mainLogo={<MountainIcon className="h-6 w-6" />} mainTitle={'KARPORT'} navbarProps={NAV_PROPS} langs={LANGUAGES} i18n={i18n}/>
           <App />
-        </>
       </I18nextProvider>
     </BrowserRouter>
   </StrictMode>
