@@ -1,18 +1,21 @@
 import {
   generateLanguageDetail,
+  KPFooterProps,
   KPNavBarProps,
   LanguageDetail,
   NavContent,
   NavItem,
+  getAppVersion
 } from '@kp-react-lib/kp-react-common';
 import { Brain, Shuffle, HandshakeIcon, Layers } from 'lucide-react';
 
+const CURRENT_VERSION = getAppVersion()
 /**
  * Navigation constants
  */
 const NAV_ITEMS: NavItem[] = [
   {title: 'nav.item.home', link: '/'},
-  {title: 'nav.item.about.me', link: '/about-me', className: 'grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]'},
+  {title: 'nav.item.about.me', link: '/about-me', className: 'grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px] xl:w-[550px] 2xl:w-[600px]'},
   {title: 'nav.item.projects', link: '/projects', className: 'grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'}
 ]
 
@@ -82,3 +85,13 @@ export const HOME_HIGHLIGHTS = [
     icon: Brain,
   },
 ]
+
+/**
+ * FOOTER PARTS
+ */
+export const FOOTER_PROPS: KPFooterProps = {
+  version: 'ver_0.',
+  versionHighlight: CURRENT_VERSION,
+  highlightColor: 'text-[#43DCF7]',
+  footerRStr: 'footer.string'
+}
