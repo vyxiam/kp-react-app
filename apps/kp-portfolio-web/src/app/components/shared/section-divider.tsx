@@ -1,5 +1,6 @@
 import { KPArtDivider } from '@kp-react-lib/kp-react-common';
 import { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 
 export function SectionDivider() {
   const [size, setSize] = useState(3);
@@ -24,7 +25,14 @@ export function SectionDivider() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <KPArtDivider code={5} size={size} className={"text-xs lg:text-lg 2xl:text-xl font-bold text-center mb-4 mt-4 select-none text-foreground"}/>
+    <motion.div
+      initial={{opacity: 0, y: 75}}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{duration: 0.5}}
+      viewport={{ once: true }}
+    >
+      <KPArtDivider code={5} size={size} className={"text-xs lg:text-lg 2xl:text-xl font-bold text-center mb-4 mt-4 select-none text-foreground"}/>
+    </motion.div>
   );
 }
 

@@ -1,6 +1,7 @@
 import { KPArtDivider } from '@kp-react-lib/kp-react-common';
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 
 export function PageTitle({title}: {title: string} ) {
   const {t} = useTranslation()
@@ -26,10 +27,15 @@ export function PageTitle({title}: {title: string} ) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <>
+    <motion.div
+      initial={{opacity: 0, y: 75}}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{duration: 0.5}}
+      viewport={{ once: true }}
+    >
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-10">{t(title)}</h1>
       <KPArtDivider code={1} size={size}/>
-    </>
+    </motion.div>
   );
 }
 

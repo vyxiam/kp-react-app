@@ -12,7 +12,7 @@ export function Skills() {
     <section className="max-w-full mx-auto px-4 sm:p-8 lg:p-12 relative z-10">
       <motion.div
         className="text-center"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
@@ -21,14 +21,22 @@ export function Skills() {
       </motion.div>
       <Tabs defaultValue="technical" className="w-full">
         <div className="flex justify-center mb-8">
-          <TabsList className="rounded-full p-1">
-            <TabsTrigger value="technical" className="rounded-full px-6 data-[state=active]:bg-yellow-300">
-              Technical skills
-            </TabsTrigger>
-            <TabsTrigger value="soft" className="rounded-full px-6 data-[state=active]:bg-yellow-300">
-              Soft skills
-            </TabsTrigger>
-          </TabsList>
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5}}
+            viewport={{ once: true }}
+          >
+            <TabsList className="rounded-full p-1">
+              <TabsTrigger value="technical" className="rounded-full px-6 data-[state=active]:bg-yellow-300">
+                Technical skills
+              </TabsTrigger>
+              <TabsTrigger value="soft" className="rounded-full px-6 data-[state=active]:bg-yellow-300">
+                Soft skills
+              </TabsTrigger>
+            </TabsList>
+          </motion.div>
         </div>
         <TabsContent value="technical">
           <div className="grid gap-6 lg:grid-cols-2 2xl:grid-cols-4 lg:gap-8">

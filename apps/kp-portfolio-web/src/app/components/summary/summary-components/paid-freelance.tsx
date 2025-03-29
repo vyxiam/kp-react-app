@@ -10,11 +10,17 @@ export function PaidFreelance() {
   const {t} = useTranslation()
   return (
     <section className="rounded-3xl md:p-12 max-h-screen-xl md:py-16 flex flex-col items-center">
-      <div className="relative">
+      <motion.div
+        className="relative"
+        initial={{opacity: 0, y: 40}}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{duration: 0.5}}
+        viewport={{ once: true}}
+      >
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">{t('summary.paid.reference.experience')}</h1>
         <p className={styles['position-title'] + " text-center mb-2"}>{t('summary.experience.since')} <span className={styles['position-title-underscore']}>2024</span></p>
         <p className="text-center mb-4 ">{t('summary.paid.reference.experience.brief')}</p>
-      </div>
+      </motion.div>
 
       <div className="mt-12 w-[80%] lg:w-[90%] xl:w-[70%]">
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10">
@@ -42,12 +48,18 @@ export function PaidFreelance() {
           ))}
         </dl>
       </div>
-      <div className="flex mt-10">
+      <motion.div
+        className="flex mt-10"
+        initial={{opacity: 0, y: 20}}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{duration: 0.5, delay: 0.4}}
+        viewport={{ once: true}}
+      >
         <Button size="lg">
           {t('summary.experience.detailed.button')}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
-      </div>
+      </motion.div>
     </section>
   );
 }
