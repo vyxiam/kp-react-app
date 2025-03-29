@@ -5,6 +5,7 @@ import styles from './my-name.module.css';
 import { motion } from 'framer-motion';
 import ThunderReveal from '@/app/components/shared/motion/ThunderReveal';
 import Reveal from '@/app/components/shared/motion/Reveal';
+import { Link } from 'react-router-dom';
 
 export function MyName() {
   const {t} = useTranslation()
@@ -21,28 +22,34 @@ export function MyName() {
             <motion.span
               initial={{color: 'black'}}
               whileInView={{ color: '#f7ca18' }}
-              transition={{duration: 0.5, delay: 1}}
+              transition={{duration: 0.5, delay: 0.65}}
               viewport={{ once: true }}
             >
               <motion.span initial={{color: 'black', borderBottom: 'none'}}
                            whileInView={{ color: '#f7ca18' , borderBottom: '5px solid #f7ca18'}}
-                           transition={{duration: 0.5, delay: 1}}
+                           transition={{duration: 0.5, delay: 0.65}}
                            viewport={{ once: true }} className={styles['position-title-underscore']}> Full-stack</motion.span> Developer</motion.span></span></ThunderReveal>
           <Reveal delay={0.3}><p className="mt-4 mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             {t('summary.description')}
           </p></Reveal>
         </div>
         <Reveal delay={0.3}><div className="flex gap-4 flex-col sm:flex-row">
-          <Button size="lg">
-            {t('summary.primary.button')}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="lg">
-            {t('summary.secondary.button.skills')}
-          </Button>
-          <Button variant="outline" size="lg">
-            {t('summary.secondary.button.projects')}
-          </Button>
+          <Link to='/detailed-experience'>
+            <Button size="lg">
+              {t('summary.primary.button')}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+          <Link to='/detailed-skills'>
+            <Button variant="outline" size="lg">
+              {t('summary.secondary.button.skills')}
+            </Button>
+          </Link>
+          <Link to='/freelance-projects'>
+            <Button variant="outline" size="lg">
+              {t('summary.secondary.button.projects')}
+            </Button>
+          </Link>
         </div></Reveal>
       </div>
     </section>

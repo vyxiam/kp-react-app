@@ -5,11 +5,12 @@ import { uuid } from '@kp-react-lib/kp-react-common';
 import { motion } from "framer-motion"
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function PaidFreelance() {
   const {t} = useTranslation()
   return (
-    <section className="rounded-3xl md:p-12 max-h-screen-xl md:py-16 flex flex-col items-center">
+    <section className="rounded-3xl py-16 md:p-12 max-h-screen-xl md:py-16 flex flex-col items-center">
       <motion.div
         className="relative"
         initial={{opacity: 0, y: 40}}
@@ -55,10 +56,12 @@ export function PaidFreelance() {
         transition={{duration: 0.5, delay: 0.4}}
         viewport={{ once: true}}
       >
-        <Button size="lg">
-          {t('summary.experience.detailed.button')}
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link to='/detailed-experience'>
+          <Button size="lg">
+            {t('summary.experience.detailed.exp.button')}
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </motion.div>
     </section>
   );

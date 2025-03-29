@@ -4,6 +4,7 @@ import { CRA_SUMMARY } from '@/app/components/shared/Constant';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
 
 export function Experience() {
   const {t} = useTranslation()
@@ -47,10 +48,12 @@ export function Experience() {
         transition={{duration: 0.5, delay: 0.4}}
         viewport={{ once: true}}
       >
-        <Button size="lg">
-          {t('summary.experience.detailed.button')}
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link to='/detailed-experience'>
+          <Button size="lg">
+            {t('summary.experience.detailed.exp.button')}
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </motion.div>
     </section>
   );
