@@ -17,7 +17,7 @@ export function HomeWelcome() {
             {t('home.my.site')}
           </h1>
           <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            {t('home.welcome.description')}
+            <span dangerouslySetInnerHTML={{__html: t('home.welcome.description')}}></span>
           </p>
         </div>
         <div className="flex gap-4 flex-col sm:flex-row">

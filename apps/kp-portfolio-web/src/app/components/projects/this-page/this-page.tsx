@@ -1,10 +1,10 @@
-import styles from './this-page.module.css';
+import PageTitle from '@/app/components/shared/page-title';
 
 export function ThisPage() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to ThisPage!</h1>
-    </div>
+    <>
+      <PageTitle title={'this.page.title'}/>
+    </>
   );
 }
 

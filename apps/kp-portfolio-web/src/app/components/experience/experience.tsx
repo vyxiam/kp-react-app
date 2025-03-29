@@ -1,10 +1,8 @@
-import styles from './experience.module.css';
+import PageTitle from '../shared/page-title';
 
 export function Experience() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Experience!</h1>
-    </div>
+    <PageTitle title={'experience.page.title'}/>
   );
 }
 

@@ -28,5 +28,22 @@
   "highlights.card.adaptability.collaboration.description": "Harness the power of machine learning to derive actionable insights from your data.",
   "highlights.card.problem.solving.title": "Problem-solving and critical thinking",
   "highlights.card.problem.solving.description": "Harness the power of machine learning to derive actionable insights from your data.",
-  "footer.string": "2025 © VY STUDIO - ALL RIGHTS RESERVED."
+  "footer.string": "2025 © VY STUDIO - ALL RIGHTS RESERVED.",
+  "summary.page.title": "Summary of myself",
+  "summary.my.name": "Vy Nguyen",
+  "summary.description": "I've spent the last 3 years building and scaling software including Web application, Software development and some other cool projects. Let me summarize myself in this page",
+  "summary.primary.button": "Explore my past experience",
+  "summary.secondary.button.skills": "Explore my skills",
+  "summary.secondary.button.projects": "Explore my projects",
+  "summary.experience": "FULL-TIME EXPERIENCE",
+  "summary.experience.since": "Since",
+  "summary.experience.cra.brief": "I'm currently working at CRA where I'm a IT Analyst and full-stack developer. My primary tasks are developing, testing, identify and resolve IT problems especially in Web form applications.",
+  "summary.experience.detailed.button": "View detailed experience",
+  "summary.paid.reference.experience": "PAID FREELANCE",
+  "summary.paid.reference.experience.brief": "I'm currently working at CRA where I'm a IT Analyst and full-stack developer. My primary tasks are developing, testing, identify and resolve IT problems especially in Web form applications.",
+  "summary.skills.title": "SKILLS",
+  "experience.page.title": "Detailed Experience",
+  "skills.page.title": "Detailed Skills",
+  "freelance.page.title": "Freelance Projects",
+  "this.page.title": "Project: This website"
 }

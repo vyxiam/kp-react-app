@@ -1,10 +1,10 @@
-import styles from './skills.module.css';
+import PageTitle from '@/app/components/shared/page-title';
 
 export function Skills() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Skills!</h1>
-    </div>
+    <>
+      <PageTitle title={'skills.page.title'}/>
+    </>
   );
 }
 

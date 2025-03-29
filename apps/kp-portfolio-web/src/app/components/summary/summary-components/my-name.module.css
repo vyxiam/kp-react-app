@@ -1,0 +1,19 @@
+.position-title {
+  width: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  font-size: 2rem;
+}
+
+.position-title span {
+  color: #f7ca18;
+}
+
+.position-title-underscore{
+  position: relative;
+  border-bottom: 5px solid #f7ca18;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 15px;
+}
