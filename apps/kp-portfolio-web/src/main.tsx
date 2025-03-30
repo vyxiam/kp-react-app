@@ -8,6 +8,7 @@ import { I18nextProvider } from 'react-i18next';
 import { MountainIcon } from 'lucide-react';
 import { FOOTER_PROPS, LANGUAGES, NAV_PROPS } from '@/app/components/shared/Constant';
 import { KPFooter, KPHeader } from '@kp-react-lib/kp-react-common';
+import '@kp-react-lib/kp-react-common/dist/index.css'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

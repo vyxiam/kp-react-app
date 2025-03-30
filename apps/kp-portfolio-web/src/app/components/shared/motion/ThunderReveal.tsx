@@ -40,6 +40,7 @@ export function ThunderReveal({children}:{children: ReactNode}) {
           bottom: 0,
           left: 0,
           right: 0,
+          borderTop: '5px solid #f7ca18',
           borderBottom: '5px solid #f7ca18',
           borderBottomRightRadius: '5px',
           background: 'transparent',
