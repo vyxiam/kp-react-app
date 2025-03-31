@@ -4,10 +4,11 @@ import { FREELANCE_SUMMARY } from '@/app/components/shared/Constant';
 import { DotPrimaryButton, uuid } from '@kp-react-lib/kp-react-common';
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 export function PaidFreelance() {
   const {t} = useTranslation()
+  const navigate = useNavigate()
   return (
     <section className="rounded-3xl py-16 md:p-12 max-h-screen-xl md:py-16 flex flex-col items-center">
       <motion.div
@@ -55,9 +56,7 @@ export function PaidFreelance() {
         transition={{duration: 0.5, delay: 0.4}}
         viewport={{ once: true}}
       >
-        <Link to='/detailed-experience'>
-          <DotPrimaryButton text={t('summary.experience.detailed.exp.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
-        </Link>
+        <DotPrimaryButton onClick={() => navigate('/detailed-experience')} text={t('summary.experience.detailed.exp.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
       </motion.div>
     </section>
   );

@@ -6,10 +6,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { SKILLS_SOFT, SKILLS_TECHNICAL } from '@/app/components/shared/Constant';
 import { DotPrimaryButton, uuid } from '@kp-react-lib/kp-react-common';
 import Reveal from '@/app/components/shared/motion/Reveal';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 export function Skills() {
   const {t} = useTranslation()
+  const navigate = useNavigate()
   return (
     <section className="max-w-full mx-auto px-4 sm:p-8 lg:p-12 relative z-10">
       <motion.div
@@ -108,9 +109,7 @@ export function Skills() {
       </Tabs>
 
       <Reveal className={'flex mt-10 text-center justify-center'}>
-        <Link to='/detailed-skills'>
-          <DotPrimaryButton text={t('summary.experience.detailed.skills.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
-        </Link>
+        <DotPrimaryButton onClick={() => navigate('/detailed-skills')} text={t('summary.experience.detailed.skills.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
       </Reveal>
 
     </section>

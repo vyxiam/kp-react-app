@@ -4,7 +4,7 @@ import styles from './my-name.module.css';
 import { motion } from 'framer-motion';
 import ThunderReveal from '@/app/components/shared/motion/ThunderReveal';
 import Reveal from '@/app/components/shared/motion/Reveal';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import {
   DotPrimaryButton,
   KPOutlineButton,
@@ -12,6 +12,7 @@ import {
 
 export function MyName() {
   const {t} = useTranslation()
+  const navigate = useNavigate()
   return (
     <section className="flex flex-col items-center justify-center space-y-8 text-center md:py-32">
       <div className="flex flex-col items-center justify-center -2xl space-y-8 py-16 text-center md:py-24">
@@ -37,15 +38,9 @@ export function MyName() {
           </p></Reveal>
         </div>
         <Reveal delay={0.3}><div className="flex gap-4 flex-col sm:flex-row">
-          <Link to='/detailed-experience' tabIndex={-1}>
-            <DotPrimaryButton text={t('summary.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
-          </Link>
-          <Link to='/detailed-skills' tabIndex={-1}>
-            <KPOutlineButton text={t('summary.secondary.button.skills')}/>
-          </Link>
-          <Link to='/freelance-projects' tabIndex={-1}>
-            <KPOutlineButton text={t('summary.secondary.button.projects')}/>
-          </Link>
+            <DotPrimaryButton onClick={() => navigate('/detailed-experience')} text={t('summary.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
+            <KPOutlineButton onClick={() => navigate('/detailed-skills')} text={t('summary.secondary.button.skills')}/>
+            <KPOutlineButton onClick={() => navigate('/freelance-projects')} text={t('summary.secondary.button.projects')}/>
         </div></Reveal>
       </div>
     </section>

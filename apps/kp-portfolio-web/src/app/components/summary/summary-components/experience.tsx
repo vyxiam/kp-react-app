@@ -3,11 +3,12 @@ import styles from './my-name.module.css';
 import { CRA_SUMMARY } from '@/app/components/shared/Constant';
 import { ArrowRight } from 'lucide-react';
 import { motion } from "framer-motion"
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { DotPrimaryButton } from '@kp-react-lib/kp-react-common';
 
 export function Experience() {
   const {t} = useTranslation()
+  const navigate = useNavigate()
   return (
     <section className="rounded-3xl p-12 pb-0 max-h-screen-xl md:py-16 md:pb-0 flex flex-col items-center">
       <motion.div
@@ -48,9 +49,7 @@ export function Experience() {
         transition={{duration: 0.5, delay: 0.4}}
         viewport={{ once: true}}
       >
-        <Link to='/detailed-experience'>
-          <DotPrimaryButton text={t('summary.experience.detailed.exp.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
-        </Link>
+        <DotPrimaryButton onClick={() => navigate('/detailed-experience')} text={t('summary.experience.detailed.exp.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
       </motion.div>
     </section>
   );

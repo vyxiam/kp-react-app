@@ -1,11 +1,12 @@
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { HOME_HIGHLIGHTS } from '@/app/components/shared/Constant';
 import { useTranslation } from 'react-i18next';
-import { uuid } from '@kp-react-lib/kp-react-common';
+import { DotPrimaryButton, KPOutlineButton, uuid } from '@kp-react-lib/kp-react-common';
+import { useNavigate } from 'react-router';
 
 export function HomeWelcome() {
   const {t} = useTranslation()
+  const navigate = useNavigate()
   return (
     <section className="">
       {/*<div className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center space-y-8 py-24 text-center md:py-32">*/}
@@ -21,13 +22,8 @@ export function HomeWelcome() {
           </p>
         </div>
         <div className="flex gap-4 flex-col sm:flex-row">
-          <Button size="lg">
-            {t('home.primary.button')}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="lg">
-            {t('home.secondary.button')}
-          </Button>
+          <DotPrimaryButton onClick={() => navigate('/summary')} text={t('home.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
+          <KPOutlineButton onClick={() => navigate('/freelance-projects')} text={t('home.secondary.button')}></KPOutlineButton>
         </div>
       </div>
 
