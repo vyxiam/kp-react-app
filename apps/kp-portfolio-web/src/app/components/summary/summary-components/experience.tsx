@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import styles from './my-name.module.css';
 import { CRA_SUMMARY } from '@/app/components/shared/Constant';
-import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
+import { DotPrimaryButton } from '@kp-react-lib/kp-react-common';
 
 export function Experience() {
   const {t} = useTranslation()
@@ -49,10 +49,7 @@ export function Experience() {
         viewport={{ once: true}}
       >
         <Link to='/detailed-experience'>
-          <Button size="lg">
-            {t('summary.experience.detailed.exp.button')}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <DotPrimaryButton text={t('summary.experience.detailed.exp.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
         </Link>
       </motion.div>
     </section>

@@ -1,12 +1,14 @@
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 import styles from './my-name.module.css';
 import { motion } from 'framer-motion';
 import ThunderReveal from '@/app/components/shared/motion/ThunderReveal';
 import Reveal from '@/app/components/shared/motion/Reveal';
 import { Link } from 'react-router-dom';
-import { KPOutlineButton } from '@kp-react-lib/kp-react-common';
+import {
+  DotPrimaryButton,
+  KPOutlineButton,
+} from '@kp-react-lib/kp-react-common';
 
 export function MyName() {
   const {t} = useTranslation()
@@ -36,10 +38,7 @@ export function MyName() {
         </div>
         <Reveal delay={0.3}><div className="flex gap-4 flex-col sm:flex-row">
           <Link to='/detailed-experience' tabIndex={-1}>
-            <Button size="lg">
-              {t('summary.primary.button')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <DotPrimaryButton text={t('summary.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
           </Link>
           <Link to='/detailed-skills' tabIndex={-1}>
             <KPOutlineButton text={t('summary.secondary.button.skills')}/>

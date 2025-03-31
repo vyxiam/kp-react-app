@@ -4,8 +4,7 @@ import { ArrowRight, Check } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { SKILLS_SOFT, SKILLS_TECHNICAL } from '@/app/components/shared/Constant';
-import { uuid } from '@kp-react-lib/kp-react-common';
-import { Button } from '@/components/ui/button';
+import { DotPrimaryButton, uuid } from '@kp-react-lib/kp-react-common';
 import Reveal from '@/app/components/shared/motion/Reveal';
 import { Link } from 'react-router-dom';
 
@@ -110,10 +109,7 @@ export function Skills() {
 
       <Reveal className={'flex mt-10 text-center justify-center'}>
         <Link to='/detailed-skills'>
-          <Button size="lg">
-            {t('summary.experience.detailed.skills.button')}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <DotPrimaryButton text={t('summary.experience.detailed.skills.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
         </Link>
       </Reveal>
 
