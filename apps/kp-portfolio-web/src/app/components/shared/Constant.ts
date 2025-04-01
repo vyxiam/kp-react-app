@@ -19,6 +19,9 @@ import {
   Webhook,
   Monitor, FolderKanban
 } from 'lucide-react';
+import cra_exp from '@/assets/experience_cra.jpg';
+import freelance_exp from '@/assets/freelance.jpg';
+import school_exp from '@/assets/school.jpg';
 
 const CURRENT_VERSION = getAppVersion()
 /**
@@ -220,5 +223,30 @@ export const SKILLS_SOFT = [
     title: "Adaptability",
     description: "One of my core strengths is the ability to quickly adjust to new environments",
     content: "My ability to rapidly acquire and apply new skills allows me to stay ahead of the curve, and I approach each task with confidence. This flexibility ensures that I consistently deliver high-quality results, no matter the project or technology."
+  }
+]
+
+/**
+ * EXPERIENCE PARTS
+ */
+
+export const EXPERIENCE_CARDS = [
+  {
+    img: cra_exp,
+    location: 'experience.cra.location',
+    title: 'experience.cra.title',
+    period: 'experience.cra.period'
+  },
+  {
+    img: freelance_exp,
+    location: 'experience.karport.location',
+    title: 'experience.karport.title',
+    period: 'experience.karport.period'
+  },
+  {
+    img: school_exp,
+    location: 'experience.personal.location',
+    title: 'experience.personal.title',
+    period: 'experience.personal.period'
   }
 ]
