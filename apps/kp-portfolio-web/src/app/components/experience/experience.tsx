@@ -5,6 +5,7 @@ import CRA from '@/app/components/experience/experience-components/details/CRA';
 import Karport from '@/app/components/experience/experience-components/details/Karport';
 import Personal from '@/app/components/experience/experience-components/details/personal';
 import styles from './experience.module.css'
+import IntroCard from '@/app/components/experience/experience-components/details/IntroCard';
 
 export function Experience() {
   const pageTitleRef = useRef<HTMLDivElement>(null)
@@ -47,13 +48,28 @@ export function Experience() {
         return <ExpandingCards revealFunc={revealExp}/>
       case 0:
         hideElements(true)
-        return <CRA setIntroStatus={setIntroDone} revealFunc={revealExp}/>
+        return (
+          <IntroCard setIntroStatus={setIntroDone}
+                     location={"experience.details.intro.location.cra"} year={"experience.details.intro.year.2023"}
+                     positionHighlight={"experience.details.intro.position.highlight.full.stack"}
+                     position={"experience.details.intro.position.developer"}>
+            <CRA revealFunc={revealExp}/></IntroCard>)
       case 1:
         hideElements(true)
-        return <Karport revealFunc={revealExp}/>
+        return (
+          <IntroCard setIntroStatus={setIntroDone}
+                     location={"experience.details.intro.location.freelance"} year={"experience.details.intro.year.2024"}
+                     positionHighlight={"experience.details.intro.position.highlight.back.end"}
+                     position={"experience.details.intro.position.developer"}>
+            <Karport revealFunc={revealExp}/></IntroCard>)
       case 2:
         hideElements(true)
-        return <Personal revealFunc={revealExp}/>
+        return (
+          <IntroCard setIntroStatus={setIntroDone}
+                     location={"experience.details.intro.location.personal"} year={"experience.details.intro.year.2021"}
+                     positionHighlight={"experience.details.intro.position.highlight.software"}
+                     position={"experience.details.intro.position.developer"}>
+            <Personal revealFunc={revealExp}/></IntroCard>)
       default:
         return <ExpandingCards revealFunc={revealExp}/>
     }
