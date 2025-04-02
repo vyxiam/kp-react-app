@@ -24,12 +24,12 @@ export function MyName() {
           </Reveal>
           <ThunderReveal><span className={styles['position-title']}>IT Analyst and
             <motion.span
-              initial={{color: 'black'}}
+              initial={{color: '#020618'}}
               whileInView={{ color: '#f7ca18' }}
               transition={{duration: 0.5, delay: 0.65}}
               viewport={{ once: true }}
             >
-              <motion.span initial={{color: 'black', borderBottom: 'none'}}
+              <motion.span initial={{color: '#020618', borderBottom: 'none'}}
                            whileInView={{ color: '#f7ca18' , borderBottom: '5px solid #f7ca18'}}
                            transition={{duration: 0.5, delay: 0.65}}
                            viewport={{ once: true }} className={styles['position-title-underscore']}> Full-stack</motion.span> Developer</motion.span></span></ThunderReveal>

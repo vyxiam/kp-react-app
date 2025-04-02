@@ -1,9 +1,14 @@
 import { KPArtDivider } from '@kp-react-lib/kp-react-common';
 import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react';
+import { RefObject, useEffect, useState } from 'react';
 import { motion } from "framer-motion"
 
-export function PageTitle({title}: {title: string} ) {
+interface Props {
+  ref?: RefObject<HTMLDivElement | null>;
+  title: string
+}
+
+export function PageTitle({ref, title}: Props ) {
   const {t} = useTranslation()
   const [size, setSize] = useState(3);
   useEffect(() => {
@@ -28,6 +33,7 @@ export function PageTitle({title}: {title: string} ) {
   }, []);
   return (
     <motion.div
+      ref={ref?ref:null}
       initial={{opacity: 0, y: 75}}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{duration: 0.5}}
