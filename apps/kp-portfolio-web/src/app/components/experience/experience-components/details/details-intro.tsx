@@ -1,25 +1,27 @@
 import styles from './details.module.css'
 import { useTranslation } from 'react-i18next';
-import Reveal from '@/app/components/shared/motion/Reveal';
-import { motion } from 'framer-motion';
+import RevealIntroBG from '@/app/components/shared/motion/RevealIntroBG';
+import RevealIntro from '@/app/components/shared/motion/RevealIntro';
+import { Dispatch, SetStateAction } from 'react';
 
 interface DetailsProps {
+  condition:  Dispatch<SetStateAction<boolean>>
   location: string;
   positionHighlight?: string;
   position: string;
   year: string;
 }
 
-export function DetailsIntro({location, positionHighlight, position, year}:DetailsProps) {
+export function DetailsIntro({condition, location, positionHighlight, position, year}:DetailsProps) {
   const {t} = useTranslation()
   return (
     <>
-      <motion.div initial={{opacity: 0, display: 'none'}} animate={{opacity: 1, display: 'block'}} transition={{duration: 0.5, delay: 1}} className={'h-full w-full absolute ' + styles['fake-bg']}></motion.div>
+      <RevealIntroBG cleanup={condition} duration={0.5} delayShow={0.5} delayHide={4.2} className={'h-full w-full absolute ' + styles['fake-bg']}></RevealIntroBG>
       <div className={styles['details-body'] + ' flex flex-col-reverse'}>
         <div className='absolute z-[100] bottom-[45vh]'>
-          <Reveal delay={2}><p className={styles['position-title'] + styles['cursive'] + " text-center mb text-[3rem]"}>{location}</p></Reveal>
-          <Reveal delay={2.2}><p className={styles['position-title'] + " text-center mb text-[3rem]"}><span className={styles['position-title-underscore']}>{positionHighlight}</span>{position}</p></Reveal>
-          <Reveal delay={2.4}><p className={styles['position-title'] + " text-center mb-2 text-[3rem]"}>{t('experience.details.intro.since')} <span>{year}</span> </p></Reveal>
+          <RevealIntro duration={0.3} delayShow={2} delayHide={2}><p className={styles['position-title'] + styles['cursive'] + " text-center mb text-[3rem]"}>{location}</p></RevealIntro>
+          <RevealIntro duration={0.3} delayShow={2.2} delayHide={1.6}><p className={styles['position-title'] + " text-center mb text-[3rem]"}><span className={styles['position-title-underscore']}>{positionHighlight}</span>{position}</p></RevealIntro>
+          <RevealIntro duration={0.3} delayShow={2.4} delayHide={1.2}><p className={styles['position-title'] + " text-center mb-2 text-[3rem]"}>{t('experience.details.intro.since')} <span>{year}</span> </p></RevealIntro>
         </div>
       </div>
     </>
