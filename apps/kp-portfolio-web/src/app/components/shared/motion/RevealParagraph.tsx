@@ -1,11 +1,15 @@
+import { DynamicTag } from '@kp-react-lib/kp-react-common';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { ReactNode, useEffect, useRef } from 'react';
+
 interface Props {
   children: ReactNode;
+  tag?: string;
   className?: string;
+  divClassName?: string;
   delay?: number;
 }
-export function RevealParagraph({children, delay, className}: Props) {
+export function RevealParagraph({children, delay, className, divClassName = '', tag = 'p'}: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {once: true})
   const mainControls = useAnimation()
@@ -25,9 +29,9 @@ export function RevealParagraph({children, delay, className}: Props) {
   }
 
   return (
-    <motion.p
+    <motion.div
       ref = {ref}
-      className={className}
+      className={divClassName}
       variants={{
         'hidden': {opacity: 0, y: 75},
         'visible': {opacity: 1, y: 0}
@@ -35,8 +39,11 @@ export function RevealParagraph({children, delay, className}: Props) {
       initial='hidden'
       animate={mainControls}
       transition={{duration: 0.4, delay: delay, ease: 'easeOut'}}
-    >{children}
-    </motion.p>
+    >{ tag.toLowerCase() === 'div'?
+      (children)
+      :
+      (<DynamicTag className={className} tag={tag}>{children}</DynamicTag>)}
+    </motion.div>
   );
 }
 

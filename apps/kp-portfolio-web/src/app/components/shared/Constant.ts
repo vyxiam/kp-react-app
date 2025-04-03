@@ -5,7 +5,14 @@ import {
   LanguageDetail,
   NavContent,
   NavItem,
-  getAppVersion
+  getAppVersion,
+  SVGAngular,
+  IconComponent,
+  SVGMaven,
+  SVGJava,
+  SVGGitea,
+  SVGJira,
+  SVGJenkins,
 } from '@kp-react-lib/kp-react-common';
 import {
   Brain,
@@ -249,4 +256,13 @@ export const EXPERIENCE_CARDS = [
     title: 'experience.personal.title',
     period: 'experience.personal.period'
   }
+]
+
+export const CRA_EXP_DEV_TECHS: {icon: IconComponent , description: string}[] = [
+  {icon: SVGAngular, description: 'Angular'},
+  {icon: SVGMaven, description: 'Maven'},
+  {icon: SVGJava, description: 'Java'},
+  {icon: SVGGitea, description: 'Gitea'},
+  {icon: SVGJira, description: 'Jira'},
+  {icon: SVGJenkins, description: 'Jenkins'},
 ]
