@@ -39,7 +39,7 @@ export function CRA({revealFunc}: ExpProps) {
         mainDown={t('experience.details.cra.body.development.main.down')}
         body={t('experience.details.cra.body.development.main.content')}/>
 
-      <TechGroup techs={CRA_EXP_DEV_TECHS} length={CRA_EXP_DEV_TECHS.length}/>
+      <TechGroup techs={CRA_EXP_DEV_TECHS}/>
 
 
     </section>

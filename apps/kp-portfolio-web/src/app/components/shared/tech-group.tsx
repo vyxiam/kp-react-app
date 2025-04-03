@@ -8,20 +8,14 @@ interface Technology {
 
 interface TechGroupProps {
   techs: Technology[];
-  length: number
+  className?: string
 }
 
-export function TechGroup({techs, length}: TechGroupProps){
+export function TechGroup({techs, className = 'max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 gap-y-12 mt-24 justify-items-center md:justify-items-stretch'}: TechGroupProps){
   return (
-    <div className={'grid grid-cols-1 md:grid-cols-6 gap-8 mt-24'}>
+    <div className={className}>
       {techs.map((tech, index) => (
         <div key={uuid()} className="text-center space-y-4">
-          {/*<div className="w-20 h-20 bg-slate-400/10 rounded-full flex items-center justify-center mx-auto">*/}
-          {/*  <tech.icon className='h-10 w-10'/>*/}
-          {/*</div>*/}
-          {/*<h4 className="text-xl font-bold text-gray-900">*/}
-          {/*  {tech.description}*/}
-          {/*</h4>*/}
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
