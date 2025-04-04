@@ -11,7 +11,7 @@ export function DetailsParaMiddle({delay = 0.1,title, mainUp, mainDown, body, ti
         <br />
         {mainDown}
       </h2>
-      <p className="leading-relaxed">{body}</p>
+      <p className="leading-relaxed text-lg">{body}</p>
     </Reveal>
   );
 }

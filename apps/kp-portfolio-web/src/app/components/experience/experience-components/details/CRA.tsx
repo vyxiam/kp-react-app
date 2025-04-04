@@ -7,8 +7,8 @@ import TechGroup from '@/app/components/shared/tech-group';
 import { CRA_EXP_DEV_TECHS, CRA_EXP_FE_COMMON_DEV, CRA_EXP_FE_DEV } from '@/app/components/shared/Constant';
 import DetailsParaMidFourPoint
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points';
-import DetailsParaMiddleThreePoints
-  from '@/app/components/experience/experience-components/details/shared/details-para-middle-three-points';
+import DetailsParaMidFourPointsInline
+  from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points-inline';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -23,8 +23,8 @@ export function CRA({revealFunc}: ExpProps) {
       <div className='flex flex-row'>
         <div className='flex flex-col w-full justify-center px-32 pt-20'>
           <DetailsParaHeader title={t('experience.details.cra.header.about')} description={t('experience.details.cra.header.about.description')}>
-            <RevealParagraph delay={0.1} divClassName='w-[50%]'>{t("experience.details.cra.body.about.brief")}</RevealParagraph>
-            <RevealParagraph delay={0.1} divClassName='w-[50%] py-4 px-6' className='list-disc' tag={'ul'}>
+            <RevealParagraph delay={0.1} divClassName='w-[50%]' className='text-lg'>{t("experience.details.cra.body.about.brief")}</RevealParagraph>
+            <RevealParagraph delay={0.1} divClassName='w-[50%] py-4 px-6' className='list-disc text-lg' tag={'ul'}>
               <li>{t('experience.details.cra.body.about.brief.list.1')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.2')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.3')}</li>
@@ -51,7 +51,7 @@ export function CRA({revealFunc}: ExpProps) {
         description={t('experience.details.cra.header.front.end.description')}
         contents={CRA_EXP_FE_DEV}/>
 
-      <DetailsParaMiddleThreePoints
+      <DetailsParaMidFourPointsInline
         title={'experience.details.cra.header.library.header'}
         contents={CRA_EXP_FE_COMMON_DEV}/>
 

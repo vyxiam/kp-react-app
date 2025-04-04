@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import Reveal from '@/app/components/shared/motion/Reveal';
 
-interface ThreePointProps {
+interface PointProps {
   title: string;
   contents: {icon: React.ElementType, title: string, description: string}[];
 }
 
-export function DetailsParaMidThreePoints({title, contents}: ThreePointProps){
+export function DetailsParaMidFourPointsInline({title, contents}: PointProps){
   const {t} = useTranslation()
   return (
     <div className='flex flex-col items-center justify-center'>
@@ -15,7 +15,7 @@ export function DetailsParaMidThreePoints({title, contents}: ThreePointProps){
         </h2>
       </Reveal>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-4xl justify-items-center">
+      <div className="grid md:grid-cols-4 gap-2 max-w-7xl justify-items-center">
         {contents.map((item) => (
           <div key={item.title} className="bg-white/5 p-8 rounded-lg">
             <Reveal duration={0.5} delay={0.1}><item.icon className="h-12 w-12 text-green-900 mb-6" /></Reveal>
@@ -28,4 +28,4 @@ export function DetailsParaMidThreePoints({title, contents}: ThreePointProps){
   )
 }
 
-export default DetailsParaMidThreePoints
+export default DetailsParaMidFourPointsInline

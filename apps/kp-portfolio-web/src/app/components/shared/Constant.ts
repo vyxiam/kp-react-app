@@ -17,11 +17,14 @@ import {
 import {
   Brain, Shuffle, HandshakeIcon, Layers, Star, Terminal, Repeat,
   Database, Webhook, Monitor, FolderKanban,
-  Globe, House, Blocks, TabletSmartphone
+  Globe, House, Blocks, TabletSmartphone, Accessibility, LockKeyhole
 } from 'lucide-react';
 import cra_exp from '@/assets/experience_cra.jpg';
 import freelance_exp from '@/assets/freelance.jpg';
 import school_exp from '@/assets/school.jpg';
+import DetailsComponentCounter from '@/app/components/experience/experience-components/details/shared/details-component-counter';
+import DetailsImproveCounter
+  from '@/app/components/experience/experience-components/details/shared/details-improve-counter';
 
 const CURRENT_VERSION = getAppVersion()
 /**
@@ -268,7 +271,8 @@ export const CRA_EXP_FE_DEV = [
 ]
 
 export const CRA_EXP_FE_COMMON_DEV = [
-  {icon: TabletSmartphone, title: 'experience.details.cra.header.library.key.improvement.title', description: 'experience.details.cra.header.library.key.improvement.description'},
-  {icon: Globe, title: 'experience.details.cra.header.library.key.accessibility.title', description: 'experience.details.cra.header.library.key.accessibility.description'},
-  {icon: House, title: 'experience.details.cra.header.library.key.security.title', description: 'experience.details.cra.header.library.key.security.description'},
+  {icon: DetailsComponentCounter, title: 'experience.details.cra.header.library.key.component.title', description: 'experience.details.cra.header.library.key.component.description'},
+  {icon: DetailsImproveCounter, title: 'experience.details.cra.header.library.key.improvement.title', description: 'experience.details.cra.header.library.key.improvement.description'},
+  {icon: Accessibility, title: 'experience.details.cra.header.library.key.accessibility.title', description: 'experience.details.cra.header.library.key.accessibility.description'},
+  {icon: LockKeyhole, title: 'experience.details.cra.header.library.key.security.title', description: 'experience.details.cra.header.library.key.security.description'},
 ]
