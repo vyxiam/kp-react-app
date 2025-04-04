@@ -266,3 +266,9 @@ export const CRA_EXP_FE_DEV = [
   {icon: House, title: 'experience.details.cra.header.front.end.key.architecture.title', description: 'experience.details.cra.header.front.end.key.architecture.description'},
   {icon: Blocks, title: 'experience.details.cra.header.front.end.key.integration.title', description: 'experience.details.cra.header.front.end.key.integration.description'},
 ]
+
+export const CRA_EXP_FE_COMMON_DEV = [
+  {icon: TabletSmartphone, title: 'experience.details.cra.header.library.key.improvement.title', description: 'experience.details.cra.header.library.key.improvement.description'},
+  {icon: Globe, title: 'experience.details.cra.header.library.key.accessibility.title', description: 'experience.details.cra.header.library.key.accessibility.description'},
+  {icon: House, title: 'experience.details.cra.header.library.key.security.title', description: 'experience.details.cra.header.library.key.security.description'},
+]

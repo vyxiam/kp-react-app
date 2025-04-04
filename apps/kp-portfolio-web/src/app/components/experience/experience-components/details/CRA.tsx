@@ -4,9 +4,11 @@ import DetailsParaHeader from '@/app/components/experience/experience-components
 import RevealParagraph from '@/app/components/shared/motion/RevealParagraph';
 import DetailsParaMiddle from '@/app/components/experience/experience-components/details/shared/details-para-middle';
 import TechGroup from '@/app/components/shared/tech-group';
-import { CRA_EXP_DEV_TECHS, CRA_EXP_FE_DEV } from '@/app/components/shared/Constant';
+import { CRA_EXP_DEV_TECHS, CRA_EXP_FE_COMMON_DEV, CRA_EXP_FE_DEV } from '@/app/components/shared/Constant';
 import DetailsParaMidFourPoint
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points';
+import DetailsParaMiddleThreePoints
+  from '@/app/components/experience/experience-components/details/shared/details-para-middle-three-points';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -48,6 +50,10 @@ export function CRA({revealFunc}: ExpProps) {
         titleDown={t('experience.details.cra.header.front.end.down')}
         description={t('experience.details.cra.header.front.end.description')}
         contents={CRA_EXP_FE_DEV}/>
+
+      <DetailsParaMiddleThreePoints
+        title={'experience.details.cra.header.library.header'}
+        contents={CRA_EXP_FE_COMMON_DEV}/>
 
     </section>
   );
