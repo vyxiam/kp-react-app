@@ -21,12 +21,12 @@ export function DetailsParaHeader({title, description, children}: {title: string
           viewport={{ once: true }}
         ></motion.div>
         <motion.div
-          className='p-5 pl-12 bg-slate-200'
+          className='p-5 pl-12 bg-slate-200 h-24'
           style={{transformOrigin: 'left center'}}
           initial={{ width: 0 }} // Start off-screen to the left
           whileInView={{ width: '50%' }} // Move to the original position (slide in)
           transition={{
-            duration: 1.25, // Duration of the animation
+            duration: 0.75, // Duration of the animation
             ease: [0.03, 0.98, 0.5, 1], // Cubic Bezier easing function
           }}
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ export function DetailsParaHeader({title, description, children}: {title: string
               transition={{
                 duration: 0.25, // Animation duration
                 ease: 'easeOut', // Easing function (similar to 'ease-out')
-                delay: 0.5
+                delay: 0.1
               }}
             >
               <h2 className='text-2xl font-bold uppercase'>{title}</h2>
@@ -49,7 +49,7 @@ export function DetailsParaHeader({title, description, children}: {title: string
               transition={{
                 duration: 0.25, // Animation duration
                 ease: 'easeOut', // Easing function (similar to 'ease-out')
-                delay: 0.75
+                delay: 0.2
               }}
             >
               <p className='text-sm'>{description}</p>

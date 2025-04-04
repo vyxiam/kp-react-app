@@ -4,7 +4,9 @@ import DetailsParaHeader from '@/app/components/experience/experience-components
 import RevealParagraph from '@/app/components/shared/motion/RevealParagraph';
 import DetailsParaMiddle from '@/app/components/experience/experience-components/details/shared/details-para-middle';
 import TechGroup from '@/app/components/shared/tech-group';
-import { CRA_EXP_DEV_TECHS } from '@/app/components/shared/Constant';
+import { CRA_EXP_DEV_TECHS, CRA_EXP_FE_DEV } from '@/app/components/shared/Constant';
+import DetailsParaMidFourPoint
+  from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -13,15 +15,14 @@ interface ExpProps{
 export function CRA({revealFunc}: ExpProps) {
   const {t} = useTranslation()
   return (
-    <>
     <section>
       <DetailsTitle title={t('experience.details.cra.title')} position={t('experience.details.cra.position')}/>
       {/*ABOUT JOB*/}
       <div className='flex flex-row'>
-        <div className='flex flex-col w-full justify-center px-40 pt-20'>
+        <div className='flex flex-col w-full justify-center px-32 pt-20'>
           <DetailsParaHeader title={t('experience.details.cra.header.about')} description={t('experience.details.cra.header.about.description')}>
-            <RevealParagraph delay={0.75} divClassName='w-[50%]'>{t("experience.details.cra.body.about.brief")}</RevealParagraph>
-            <RevealParagraph delay={1} divClassName='w-[50%] py-4 px-6' className='list-disc' tag={'ul'}>
+            <RevealParagraph delay={0.1} divClassName='w-[50%]'>{t("experience.details.cra.body.about.brief")}</RevealParagraph>
+            <RevealParagraph delay={0.1} divClassName='w-[50%] py-4 px-6' className='list-disc' tag={'ul'}>
               <li>{t('experience.details.cra.body.about.brief.list.1')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.2')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.3')}</li>
@@ -34,16 +35,21 @@ export function CRA({revealFunc}: ExpProps) {
       </div>
 
       <DetailsParaMiddle
+        delay={0.2}
         title={t('experience.details.cra.header.development')}
         mainUp={t('experience.details.cra.body.development.main.up')}
         mainDown={t('experience.details.cra.body.development.main.down')}
         body={t('experience.details.cra.body.development.main.content')}/>
 
-      <TechGroup techs={CRA_EXP_DEV_TECHS}/>
+      <TechGroup techs={CRA_EXP_DEV_TECHS} baseDelay={0.2}/>
 
+      <DetailsParaMidFourPoint
+        titleUp={t('experience.details.cra.header.front.end.up')}
+        titleDown={t('experience.details.cra.header.front.end.down')}
+        description={t('experience.details.cra.header.front.end.description')}
+        contents={CRA_EXP_FE_DEV}/>
 
     </section>
-    </>
   );
 }
 

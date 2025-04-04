@@ -3,9 +3,10 @@ import { ReactNode, useEffect, useRef } from 'react';
 interface Props {
   children: ReactNode;
   className?: string;
+  duration?: number;
   delay?: number;
 }
-export function Reveal({children, delay, className}: Props) {
+export function Reveal({children, duration = 0.3, delay = 0.1, className}: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {once: true})
   const mainControls = useAnimation()
@@ -34,7 +35,7 @@ export function Reveal({children, delay, className}: Props) {
       }}
       initial='hidden'
       animate={mainControls}
-      transition={{duration: 0.3, delay: delay}}
+      transition={{duration: duration, delay: delay}}
     >{children}
     </motion.div>
   );

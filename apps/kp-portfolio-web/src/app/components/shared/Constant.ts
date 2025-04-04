@@ -15,16 +15,9 @@ import {
   SVGJenkins,
 } from '@kp-react-lib/kp-react-common';
 import {
-  Brain,
-  Shuffle,
-  HandshakeIcon,
-  Layers,
-  Star,
-  Terminal,
-  Repeat,
-  Database,
-  Webhook,
-  Monitor, FolderKanban
+  Brain, Shuffle, HandshakeIcon, Layers, Star, Terminal, Repeat,
+  Database, Webhook, Monitor, FolderKanban,
+  Globe, House, Blocks, TabletSmartphone
 } from 'lucide-react';
 import cra_exp from '@/assets/experience_cra.jpg';
 import freelance_exp from '@/assets/freelance.jpg';
@@ -265,4 +258,11 @@ export const CRA_EXP_DEV_TECHS: {icon: IconComponent , description: string}[] = 
   {icon: SVGGitea, description: 'Gitea'},
   {icon: SVGJira, description: 'Jira'},
   {icon: SVGJenkins, description: 'Jenkins'},
+]
+
+export const CRA_EXP_FE_DEV = [
+  {icon: TabletSmartphone, title: 'experience.details.cra.header.front.end.key.responsive.title', description: 'experience.details.cra.header.front.end.key.responsive.description'},
+  {icon: Globe, title: 'experience.details.cra.header.front.end.key.internationalization.title', description: 'experience.details.cra.header.front.end.key.internationalization.description'},
+  {icon: House, title: 'experience.details.cra.header.front.end.key.architecture.title', description: 'experience.details.cra.header.front.end.key.architecture.description'},
+  {icon: Blocks, title: 'experience.details.cra.header.front.end.key.integration.title', description: 'experience.details.cra.header.front.end.key.integration.description'},
 ]
