@@ -15,9 +15,28 @@ import {
   SVGJenkins,
 } from '@kp-react-lib/kp-react-common';
 import {
-  Brain, Shuffle, HandshakeIcon, Layers, Star, Terminal, Repeat,
-  Database, Webhook, Monitor, FolderKanban,
-  Globe, House, Blocks, TabletSmartphone, Accessibility, LockKeyhole, Microchip, ShieldAlert
+  Brain,
+  Shuffle,
+  HandshakeIcon,
+  Layers,
+  Star,
+  Terminal,
+  Repeat,
+  Database,
+  Webhook,
+  Monitor,
+  FolderKanban,
+  Globe,
+  House,
+  Blocks,
+  TabletSmartphone,
+  Accessibility,
+  LockKeyhole,
+  Microchip,
+  ShieldAlert,
+  CheckCircle,
+  ShieldCheck,
+  Rows4, FileCode2
 } from 'lucide-react';
 import cra_exp from '@/assets/experience_cra.jpg';
 import freelance_exp from '@/assets/freelance.jpg';
@@ -264,26 +283,34 @@ export const CRA_EXP_DEV_TECHS: {icon: IconComponent , description: string}[] = 
 ]
 
 export const CRA_EXP_FE_DEV = [
-  {icon: TabletSmartphone, title: 'experience.details.cra.header.frontend.key.responsive.title', description: 'experience.details.cra.header.frontend.key.responsive.description'},
-  {icon: Globe, title: 'experience.details.cra.header.frontend.key.internationalization.title', description: 'experience.details.cra.header.frontend.key.internationalization.description'},
-  {icon: House, title: 'experience.details.cra.header.frontend.key.architecture.title', description: 'experience.details.cra.header.frontend.key.architecture.description'},
-  {icon: Blocks, title: 'experience.details.cra.header.frontend.key.integration.title', description: 'experience.details.cra.header.frontend.key.integration.description'},
+  {icon: TabletSmartphone, title: 'experience.details.cra.frontend.key.responsive.title', description: 'experience.details.cra.frontend.key.responsive.description'},
+  {icon: Globe, title: 'experience.details.cra.frontend.key.internationalization.title', description: 'experience.details.cra.frontend.key.internationalization.description'},
+  {icon: House, title: 'experience.details.cra.frontend.key.architecture.title', description: 'experience.details.cra.frontend.key.architecture.description'},
+  {icon: Blocks, title: 'experience.details.cra.frontend.key.integration.title', description: 'experience.details.cra.frontend.key.integration.description'},
 ]
 
 export const CRA_EXP_FE_COMMON_DEV = [
-  {icon: DetailsComponentCounter, title: 'experience.details.cra.header.library.key.component.title', description: 'experience.details.cra.header.library.key.component.description'},
-  {icon: DetailsImproveCounter, title: 'experience.details.cra.header.library.key.improvement.title', description: 'experience.details.cra.header.library.key.improvement.description'},
-  {icon: Accessibility, title: 'experience.details.cra.header.library.key.accessibility.title', description: 'experience.details.cra.header.library.key.accessibility.description'},
-  {icon: LockKeyhole, title: 'experience.details.cra.header.library.key.security.title', description: 'experience.details.cra.header.library.key.security.description'},
+  {icon: DetailsComponentCounter, title: 'experience.details.cra.library.key.component.title', description: 'experience.details.cra.library.key.component.description'},
+  {icon: DetailsImproveCounter, title: 'experience.details.cra.library.key.improvement.title', description: 'experience.details.cra.library.key.improvement.description'},
+  {icon: Accessibility, title: 'experience.details.cra.library.key.accessibility.title', description: 'experience.details.cra.library.key.accessibility.description'},
+  {icon: LockKeyhole, title: 'experience.details.cra.library.key.security.title', description: 'experience.details.cra.library.key.security.description'},
 ]
 
 export const CRA_EXP_BE_DEV_FR = [
-  {icon: Microchip, title: 'experience.details.cra.header.api.title', description: 'experience.details.cra.header.api.description'},
-  {icon: ShieldAlert, title: 'experience.details.cra.header.message.title', description: 'experience.details.cra.header.message.description'}
+  {icon: Microchip, title: 'experience.details.cra.api.title', description: 'experience.details.cra.api.description'},
+  {icon: Rows4, title: 'experience.details.cra.message.title', description: 'experience.details.cra.message.description'}
 ]
 
 export const CRA_EXP_BE_DEV_SR = [
-  {icon: Microchip, title: 'experience.details.cra.header.auth.title', description: 'experience.details.cra.header.auth.description'},
-  {icon: ShieldAlert, title: 'experience.details.cra.header.file.title', description: 'experience.details.cra.header.file.description'},
-  {icon: ShieldAlert, title: 'experience.details.cra.header.error.title', description: 'experience.details.cra.header.error.description'}
+  {icon: ShieldCheck, title: 'experience.details.cra.auth.title', description: 'experience.details.cra.auth.description'},
+  {icon: FileCode2, title: 'experience.details.cra.file.title', description: 'experience.details.cra.file.description'},
+  {icon: ShieldAlert, title: 'experience.details.cra.error.title', description: 'experience.details.cra.error.description'}
+]
+
+export const CRA_EXP_MAINTENANCE_KEYPOINTS = [
+  {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.support'},
+  {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.update'},
+  {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.bug'},
+  {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.monitoring'},
+  {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.collaboration'},
 ]

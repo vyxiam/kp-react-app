@@ -8,14 +8,16 @@ import {
   CRA_EXP_BE_DEV_FR, CRA_EXP_BE_DEV_SR,
   CRA_EXP_DEV_TECHS,
   CRA_EXP_FE_COMMON_DEV,
-  CRA_EXP_FE_DEV
+  CRA_EXP_FE_DEV, CRA_EXP_MAINTENANCE_KEYPOINTS
 } from '@/app/components/shared/Constant';
+import MAINTENANCE_IMG from '@/assets/maintenance.jpg'
 import DetailsParaMidFourPoint
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points';
 import DetailsParaMidFourPointsInline
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points-inline';
 import DetailsParaMidFivePoints
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-five-points';
+import DetailsParaPoints from '@/app/components/experience/experience-components/details/shared/details-para-points';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -53,9 +55,9 @@ export function CRA({revealFunc}: ExpProps) {
       <TechGroup techs={CRA_EXP_DEV_TECHS} baseDelay={0.2}/>
 
       <DetailsParaMidFourPoint
-        titleUp={t('experience.details.cra.header.frontend.up')}
-        titleDown={t('experience.details.cra.header.frontend.down')}
-        description={t('experience.details.cra.header.frontend.description')}
+        titleUp={t('experience.details.cra.frontend.up')}
+        titleDown={t('experience.details.cra.frontend.down')}
+        description={t('experience.details.cra.frontend.description')}
         contents={CRA_EXP_FE_DEV}/>
 
       <DetailsParaMidFourPointsInline
@@ -63,12 +65,26 @@ export function CRA({revealFunc}: ExpProps) {
         contents={CRA_EXP_FE_COMMON_DEV}/>
 
       <DetailsParaMidFivePoints
-        frUpTitle={'experience.details.cra.header.backend.title.up'}
-        frDownTitle={'experience.details.cra.header.backend.title.down'}
-        srTitle={'experience.details.cra.header.backend.title.sub'}
-        description={'experience.details.cra.header.backend.description'}
+        frUpTitle={'experience.details.cra.backend.title.up'}
+        frDownTitle={'experience.details.cra.backend.title.down'}
+        srTitle={'experience.details.cra.backend.title.sub'}
+        description={'experience.details.cra.backend.description'}
         frContents={CRA_EXP_BE_DEV_FR}
         srContents={CRA_EXP_BE_DEV_SR}
+      />
+
+      <DetailsParaMiddle
+        delay={0.1}
+        title={t('experience.details.cra.header.maintenance')}
+        mainUp={t('experience.details.cra.body.maintenance.main.up')}
+        mainDown={t('experience.details.cra.body.maintenance.main.down')}
+        body={t('experience.details.cra.body.maintenance.main.content')}/>
+
+      <DetailsParaPoints
+        pointImage={MAINTENANCE_IMG}
+        title={'experience.details.cra.maintenance.key.title'}
+        description={'experience.details.cra.maintenance.key.description'}
+        contents={CRA_EXP_MAINTENANCE_KEYPOINTS}
       />
 
     </section>
