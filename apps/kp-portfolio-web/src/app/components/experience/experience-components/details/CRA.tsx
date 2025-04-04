@@ -4,11 +4,18 @@ import DetailsParaHeader from '@/app/components/experience/experience-components
 import RevealParagraph from '@/app/components/shared/motion/RevealParagraph';
 import DetailsParaMiddle from '@/app/components/experience/experience-components/details/shared/details-para-middle';
 import TechGroup from '@/app/components/shared/tech-group';
-import { CRA_EXP_DEV_TECHS, CRA_EXP_FE_COMMON_DEV, CRA_EXP_FE_DEV } from '@/app/components/shared/Constant';
+import {
+  CRA_EXP_BE_DEV_FR, CRA_EXP_BE_DEV_SR,
+  CRA_EXP_DEV_TECHS,
+  CRA_EXP_FE_COMMON_DEV,
+  CRA_EXP_FE_DEV
+} from '@/app/components/shared/Constant';
 import DetailsParaMidFourPoint
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points';
 import DetailsParaMidFourPointsInline
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-four-points-inline';
+import DetailsParaMidFivePoints
+  from '@/app/components/experience/experience-components/details/shared/details-para-middle-five-points';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -46,14 +53,23 @@ export function CRA({revealFunc}: ExpProps) {
       <TechGroup techs={CRA_EXP_DEV_TECHS} baseDelay={0.2}/>
 
       <DetailsParaMidFourPoint
-        titleUp={t('experience.details.cra.header.front.end.up')}
-        titleDown={t('experience.details.cra.header.front.end.down')}
-        description={t('experience.details.cra.header.front.end.description')}
+        titleUp={t('experience.details.cra.header.frontend.up')}
+        titleDown={t('experience.details.cra.header.frontend.down')}
+        description={t('experience.details.cra.header.frontend.description')}
         contents={CRA_EXP_FE_DEV}/>
 
       <DetailsParaMidFourPointsInline
         title={'experience.details.cra.header.library.header'}
         contents={CRA_EXP_FE_COMMON_DEV}/>
+
+      <DetailsParaMidFivePoints
+        frUpTitle={'experience.details.cra.header.backend.title.up'}
+        frDownTitle={'experience.details.cra.header.backend.title.down'}
+        srTitle={'experience.details.cra.header.backend.title.sub'}
+        description={'experience.details.cra.header.backend.description'}
+        frContents={CRA_EXP_BE_DEV_FR}
+        srContents={CRA_EXP_BE_DEV_SR}
+      />
 
     </section>
   );
