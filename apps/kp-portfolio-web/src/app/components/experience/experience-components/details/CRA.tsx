@@ -19,6 +19,7 @@ import DetailsParaMidFivePoints
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-five-points';
 import DetailsParaPoints from '@/app/components/experience/experience-components/details/shared/details-para-points';
 import ToOtherExp from '@/app/components/experience/experience-components/to-other-exp';
+import { Reveal } from '@kp-react-lib/kp-react-common';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -34,7 +35,8 @@ export function CRA({revealFunc}: ExpProps) {
         <div className='flex flex-col w-full justify-center px-32 pt-20'>
           <DetailsParaHeader title={t('experience.details.cra.header.about')} description={t('experience.details.cra.header.about.description')}>
             <RevealParagraph delay={0.1} divClassName='w-[50%]' className='text-lg'>{t("experience.details.cra.body.about.brief")}</RevealParagraph>
-            <RevealParagraph delay={0.1} divClassName='w-[50%] py-4 px-6' className='list-disc text-lg' tag={'ul'}>
+            <Reveal tag={'h2'} className='pt-4 text-lg font-bold'>{t('experience.details.cra.body.about.brief.list.header')}</Reveal>
+            <RevealParagraph delay={0.1} divClassName='w-[50%] pb-4 px-6' className='list-disc text-lg' tag={'ul'}>
               <li>{t('experience.details.cra.body.about.brief.list.1')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.2')}</li>
               <li>{t('experience.details.cra.body.about.brief.list.3')}</li>

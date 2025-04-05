@@ -36,7 +36,7 @@ import {
   ShieldAlert,
   CheckCircle,
   ShieldCheck,
-  Rows4, FileCode2
+  Rows4, FileCode2, RefreshCw, Radar, CopyPlus, Cpu, PenTool, GalleryHorizontalEnd, Rss, FileStack
 } from 'lucide-react';
 import cra_exp from '@/assets/experience_cra.jpg';
 import freelance_exp from '@/assets/freelance.jpg';
@@ -313,4 +313,26 @@ export const CRA_EXP_MAINTENANCE_KEYPOINTS = [
   {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.bug'},
   {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.monitoring'},
   {icon: CheckCircle, content: 'experience.details.cra.maintenance.key.collaboration'},
+]
+
+export const KP_EXP_V1_DEV = [
+  {icon: RefreshCw, title: 'experience.details.kp.v1.key.automate.title', description: 'experience.details.kp.v1.key.automate.description'},
+  {icon: Radar, title: 'experience.details.kp.v1.key.realtime.title', description: 'experience.details.kp.v1.key.realtime.description'},
+  {icon: CopyPlus, title: 'experience.details.kp.v1.key.multi.title', description: 'experience.details.kp.v1.key.multi.description'},
+  {icon: Cpu, title: 'experience.details.kp.v1.key.architecture.title', description: 'experience.details.kp.v1.key.architecture.description'},
+]
+
+export const KP_EXP_V1_TECH = [
+  {icon: CheckCircle, content: 'experience.details.kp.v1.tech.key.backend'},
+  {icon: CheckCircle, content: 'experience.details.kp.v1.tech.key.python'},
+  {icon: CheckCircle, content: 'experience.details.kp.v1.tech.key.ai'},
+  {icon: CheckCircle, content: 'experience.details.kp.v1.tech.key.ui'},
+  {icon: CheckCircle, content: 'experience.details.kp.v1.tech.key.performance'},
+]
+
+export const KP_EXP_V2_FEATURES = [
+  {icon: PenTool, title: 'experience.details.kp.v2.feature.ui.title', description: 'experience.details.kp.v2.feature.ui.description'},
+  {icon: GalleryHorizontalEnd, title: 'experience.details.kp.v2.feature.profile.title', description: 'experience.details.kp.v2.feature.profile.description'},
+  {icon: Rss, title: 'experience.details.kp.v2.feature.scheduling.title', description: 'experience.details.kp.v2.feature.scheduling.description'},
+  {icon: FileStack, title: 'experience.details.kp.v2.feature.log.title', description: 'experience.details.kp.v2.feature.log.description'},
 ]

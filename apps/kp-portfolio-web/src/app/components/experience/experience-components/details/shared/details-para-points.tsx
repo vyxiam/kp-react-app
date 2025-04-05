@@ -22,14 +22,16 @@ export function DetailsParaPoints({title, description, contents, pointImage}: Pr
       <div className="space-y-8">
         <div className="space-y-4">
           <Reveal tag={'h3'} className="text-2xl font-bold">{t(title)}</Reveal>
-          <Reveal tag={'p'} className="leading-relaxed">{t(description)}</Reveal>
+          <Reveal className="leading-relaxed">
+            <p dangerouslySetInnerHTML={{__html: t(description) }}/>
+          </Reveal>
         </div>
         <ul className="space-y-4">
           {contents.map((item, index) => (
             <li key={uuid()}>
               <Reveal delay={0.1 + 0.1*index} className="flex items-center gap-3">
                 <item.icon className="h-5 w-5 text-green-800 flex-shrink-0" />
-                <span className="text-gray-700">{t(item.content)}</span>
+                <span>{t(item.content)}</span>
               </Reveal>
             </li>
           ))}
