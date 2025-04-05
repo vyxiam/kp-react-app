@@ -125,6 +125,10 @@
   "experience.details.cra.maintenance.key.monitoring": "Monitored application health and optimized performance to ensure systems run efficiently under real-world usage.",
   "experience.details.cra.maintenance.key.collaboration": "Coordinated with teams and delivered clear documentation to support smooth collaboration and ongoing system maintenance.",
   "experience.details.cra.header.analyst": "Analyst",
+  "experience.to.other.exp.title": "Looking for Something Else?",
+  "experience.to.other.exp.web.description": "If your needs aren’t met here, I invite you to <span class=\"text-[#f7ca18]\">browse</span> my other projects or <span class=\"text-[#f7ca18]\">review</span> my skills section. My expertise spans <span class=\"text-[#f7ca18]\">multiple disciplines</span>—there’s more to discover <span class=\"text-[#f7ca18]\">beyond web development</span>!",
+  "experience.to.other.exp.button": "Explore All Experiences",
+  "experience.to.other.skills.button": "See All Capabilities",
   "skills.page.title": "Detailed Skills",
   "freelance.page.title": "Freelance Projects",
   "this.page.title": "Project: This website"

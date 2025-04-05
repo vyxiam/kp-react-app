@@ -18,6 +18,7 @@ import DetailsParaMidFourPointsInline
 import DetailsParaMidFivePoints
   from '@/app/components/experience/experience-components/details/shared/details-para-middle-five-points';
 import DetailsParaPoints from '@/app/components/experience/experience-components/details/shared/details-para-points';
+import ToOtherExp from '@/app/components/experience/experience-components/to-other-exp';
 
 interface ExpProps{
   revealFunc: (index: number) => void
@@ -87,6 +88,7 @@ export function CRA({revealFunc}: ExpProps) {
         contents={CRA_EXP_MAINTENANCE_KEYPOINTS}
       />
 
+      <ToOtherExp body={'experience.to.other.exp.web.description'} toExpFunc={() => revealFunc(9999)}/>
     </section>
   );
 }

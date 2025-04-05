@@ -24,9 +24,11 @@ export function Experience() {
     const headers = document.documentElement.getElementsByTagName('header')
     if (hide){
       if (headers){
+        headers[0].classList.remove(styles['fade-in'])
         headers[0].classList.add(styles['fade-out'])
       }
       refs.forEach(ref => {
+        ref.current?.classList?.remove(styles['fade-in'])
         ref.current?.classList?.add(styles['fade-out'])
       })
     }
@@ -71,6 +73,7 @@ export function Experience() {
                      position={"experience.details.intro.position.developer"}>
             <Personal revealFunc={revealExp}/></IntroCard>)
       default:
+        hideElements(false)
         return <ExpandingCards revealFunc={revealExp}/>
     }
   }
