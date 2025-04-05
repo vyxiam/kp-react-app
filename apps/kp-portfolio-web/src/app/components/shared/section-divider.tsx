@@ -1,6 +1,6 @@
 import { KPSeparator, Reveal } from '@kp-react-lib/kp-react-common';
 
-export function SectionDivider() {
+export function SectionDivider({className = 'mx-auto w-[90%]'}:{className?: string}) {
   // const [size, setSize] = useState(3);
   // useEffect(() => {
   //   const handleResize = () => {
@@ -23,7 +23,7 @@ export function SectionDivider() {
   //   return () => window.removeEventListener('resize', handleResize);
   // }, []);
   return (
-    <Reveal hiddenV = {{filter: 'blur(20px)', opacity: 0 }} visibleV = {{filter: 'blur(0px)', opacity: 1 }}><KPSeparator gradient={true} className='mx-auto w-[90%]'/></Reveal>
+    <Reveal hiddenV = {{filter: 'blur(20px)', opacity: 0 }} visibleV = {{filter: 'blur(0px)', opacity: 1 }}><KPSeparator gradient={true} className={className}/></Reveal>
     // <KPArtDivider code={5} size={size} className={"text-xs lg:text-lg 2xl:text-xl font-bold text-center mb-4 mt-4 select-none text-foreground"}/>
   );
 }

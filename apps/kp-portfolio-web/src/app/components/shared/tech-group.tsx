@@ -2,6 +2,7 @@ import { IconComponent, useResize, uuid } from '@kp-react-lib/kp-react-common';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Reveal from '@/app/components/shared/motion/Reveal';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import SectionDivider from '@/app/components/shared/section-divider';
 
 interface Technology {
   icon: IconComponent;
@@ -38,7 +39,7 @@ function generateDelays(length: number, widthSize: number, baseDelay: number, ba
   setDelays(tempDelays)
 }
 
-export function TechGroup({techs, baseDelay = 0.5, className = 'border-y-2 py-4 max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 gap-y-12 mt-24 justify-items-center md:justify-items-stretch'}: TechGroupProps){
+export function TechGroup({techs, baseDelay = 0.5, className = 'py-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 gap-y-12 justify-items-center md:justify-items-stretch'}: TechGroupProps){
   const widthSize = useResize()
   const baseDelayRatio = 0.1
   const delayInits: number[] = Array(techs.length).fill(baseDelay)
@@ -49,26 +50,30 @@ export function TechGroup({techs, baseDelay = 0.5, className = 'border-y-2 py-4 
   }, [widthSize]);
 
   return (
-    <Reveal duration={0.5} delay={0.1} className={className}>
-      {techs.map((tech, index) => (
-        <div key={uuid()} className="text-center space-y-4">
-          <TooltipProvider>
-            <Tooltip>
-              <Reveal key={tech.description} delay={delays[index]}>
-              <TooltipTrigger asChild>
-                <div key={tech.description} className="w-20 h-20 bg-slate-400/10 rounded-full flex items-center justify-center mx-auto">
-                  <tech.icon className='h-10 w-10'/>
-                </div>
-              </TooltipTrigger>
-              </Reveal>
-              <TooltipContent>
-                <p>{tech.description}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-      ))}
-    </Reveal>
+    <div className='mt-24 max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl mx-auto'>
+      <SectionDivider className={'w-full'}/>
+      <Reveal duration={0.5} delay={0.1} className={className}>
+        {techs.map((tech, index) => (
+          <div key={uuid()} className="text-center space-y-4">
+            <TooltipProvider>
+              <Tooltip>
+                <Reveal key={tech.description} delay={delays[index]}>
+                <TooltipTrigger asChild>
+                  <div key={tech.description} className="w-20 h-20 bg-slate-400/10 rounded-full flex items-center justify-center mx-auto">
+                    <tech.icon className='h-10 w-10'/>
+                  </div>
+                </TooltipTrigger>
+                </Reveal>
+                <TooltipContent>
+                  <p>{tech.description}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        ))}
+      </Reveal>
+      <SectionDivider className={'w-full'}/>
+    </div>
   );
 }
 
