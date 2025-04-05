@@ -24,7 +24,7 @@ export function DetailsParaHeader({title, description, children}: {title: string
           className='p-5 pl-12 bg-slate-200 h-full'
           style={{transformOrigin: 'left center'}}
           initial={{ width: 0 }} // Start off-screen to the left
-          whileInView={{ width: '60%' }} // Move to the original position (slide in)
+          whileInView={{ width: '100%' }} // Move to the original position (slide in)
           transition={{
             duration: 0.75, // Duration of the animation
             ease: [0.03, 0.98, 0.5, 1], // Cubic Bezier easing function
@@ -41,7 +41,7 @@ export function DetailsParaHeader({title, description, children}: {title: string
                 delay: 0.1
               }}
             >
-              <h2 className='text-2xl font-bold uppercase'>{title}</h2>
+              <h2 className='text-xl xl:text-2xl font-bold uppercase'>{title}</h2>
             </motion.div>
             <motion.div
               initial={{ x: '-10vw', opacity: 0 }} // Initial state: offscreen left and hidden
@@ -57,7 +57,7 @@ export function DetailsParaHeader({title, description, children}: {title: string
           </div>
         </motion.div>
       </div>
-      <div className='px-16 py-5'>{children}</div>
+      <div className='pl-16 py-5'>{children}</div>
     </>
   );
 }

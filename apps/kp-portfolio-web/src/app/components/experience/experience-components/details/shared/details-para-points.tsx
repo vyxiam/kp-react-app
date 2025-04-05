@@ -10,7 +10,7 @@ interface Props {
 export function DetailsParaPoints({title, description, contents, pointImage}: Props){
   const {t} = useTranslation()
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center m-14 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center m-14 max-w-7xl mx-auto px-4">
       <Reveal hiddenV = {{filter: 'blur(20px)', opacity: 0 }} visibleV = {{filter: 'blur(0px)', opacity: 1 }} className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
         <img
           src={pointImage}
@@ -21,9 +21,9 @@ export function DetailsParaPoints({title, description, contents, pointImage}: Pr
       </Reveal>
       <div className="space-y-8">
         <div className="space-y-4">
-          <Reveal tag={'h3'} className="text-2xl font-bold">{t(title)}</Reveal>
+          <Reveal tag={'h3'} className="text-xl md:text-2xl font-bold">{t(title)}</Reveal>
           <Reveal className="leading-relaxed">
-            <p dangerouslySetInnerHTML={{__html: t(description) }}/>
+            <p className='lg:text-lg' dangerouslySetInnerHTML={{__html: t(description) }}/>
           </Reveal>
         </div>
         <ul className="space-y-4">

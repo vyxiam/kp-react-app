@@ -6,12 +6,12 @@ export function DetailsParaMiddle({delay = 0.1,title, mainUp, mainDown, body, ti
       <span className={`${titleColor} font-medium tracking-wider`}>
         {title}
       </span>
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-6">
+      <h2 className="text-lg md:text-2xl xl:text-3xl font-bold text-gray-900 mt-2 mb-6">
         {mainUp}
         <br />
         {mainDown}
       </h2>
-      <p className="leading-relaxed text-lg">{body}</p>
+      <p className="leading-relaxed px-2 lg:px-0 lg:text-lg">{body}</p>
     </Reveal>
   );
 }
