@@ -17,7 +17,6 @@ export function Summary() {
         <PaidFreelance/>
         <SectionDivider />
         <Skills/>
-        <SectionDivider />
       </div>
     </>
   );
