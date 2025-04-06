@@ -12,7 +12,7 @@ interface Props {
   titleDownClassName?: string;
   contents: {titleUp: string, titleDown?: string, content: string}[]
 }
-export function DetailsParaSingle({title, reverse = false, description, contents, titleUpClassName='font-bold text-2xl', titleDownClassName='font-semibold text-xl', className='max-w-[75%] mx-auto my-10'}:Props){
+export function DetailsParaSingle({title, reverse = false, description, contents, titleUpClassName='font-bold text-2xl', titleDownClassName='font-semibold text-xl', className='max-w-[85%] xl:max-w-[80%] 2xl:max-w-7xl mx-auto my-10'}:Props){
   const {t} = useTranslation()
   return (
     <div className={className}>
@@ -32,7 +32,7 @@ export function DetailsParaSingle({title, reverse = false, description, contents
       <div className="space-y-6 mx-auto">
         {description?
           <Reveal delay={0.3} hiddenV = {{opacity: 0, y: -35, filter: 'blur(20px)'}} visibleV={{opacity: 1, y: 0, filter: 'blur(0)'}}>
-            <p className="text-gray-600" dangerouslySetInnerHTML={{__html: t(description)}}/>
+            <p className="text-gray-600 xl:text-lg" dangerouslySetInnerHTML={{__html: t(description)}}/>
           </Reveal>:''}
         {contents.map((item, index) => (
           <div className='space-y-4' key={uuid()}>
@@ -44,7 +44,7 @@ export function DetailsParaSingle({title, reverse = false, description, contents
                   <span className={titleDownClassName} dangerouslySetInnerHTML={{__html: t(item.titleDown)}}/>
                 </>:''}
             </Reveal>
-            <Reveal><span className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{__html: t(item.content)}}/></Reveal>
+            <Reveal><span className="text-gray-600 xl:text-lg leading-relaxed" dangerouslySetInnerHTML={{__html: t(item.content)}}/></Reveal>
             {(contents.length - 1) !== index?<Reveal><KPSeparator gradient={false}/></Reveal>:''}
           </div>
         ))}
