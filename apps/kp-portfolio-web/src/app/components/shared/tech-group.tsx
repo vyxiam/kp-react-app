@@ -12,8 +12,10 @@ interface Technology {
 interface TechGroupProps {
   techs: Technology[];
   baseDelay?: number;
-  className?: string
+  className?: string;
+  divider?: boolean;
 }
+
 let tempDelays: number[] = []
 function generateDelays(length: number, widthSize: number, baseDelay: number, baseDelayRatio: number, setDelays:Dispatch<SetStateAction<number[]>>){
   tempDelays.fill(baseDelay)
@@ -39,7 +41,7 @@ function generateDelays(length: number, widthSize: number, baseDelay: number, ba
   setDelays(tempDelays)
 }
 
-export function TechGroup({techs, baseDelay = 0.5, className = 'py-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 gap-y-12 justify-items-center md:justify-items-stretch'}: TechGroupProps){
+export function TechGroup({techs, baseDelay = 0.5, divider = true, className = 'py-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 gap-y-12 justify-items-center md:justify-items-stretch'}: TechGroupProps){
   const widthSize = useResize()
   const baseDelayRatio = 0.1
   const delayInits: number[] = Array(techs.length).fill(baseDelay)
@@ -51,7 +53,7 @@ export function TechGroup({techs, baseDelay = 0.5, className = 'py-4 grid grid-c
 
   return (
     <div className='mt-24 max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl mx-auto'>
-      <SectionDivider className={'w-full'}/>
+      {divider?<SectionDivider className={'w-full'}/>:''}
       <Reveal duration={0.5} delay={0.1} className={className}>
         {techs.map((tech, index) => (
           <div key={uuid()} className="text-center space-y-4">
@@ -72,7 +74,7 @@ export function TechGroup({techs, baseDelay = 0.5, className = 'py-4 grid grid-c
           </div>
         ))}
       </Reveal>
-      <SectionDivider className={'w-full'}/>
+      {divider?<SectionDivider className={'w-full'}/>:''}
     </div>
   );
 }

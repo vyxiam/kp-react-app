@@ -13,6 +13,26 @@ import {
   SVGGitea,
   SVGJira,
   SVGJenkins,
+  SVGSpring,
+  SVGPython,
+  SVGDjango,
+  SVGJavaScript,
+  SVGTypeScript,
+  SVGAI,
+  SVGHibernate,
+  SVGReact,
+  SVGHTML,
+  SVGCSS,
+  SVGTailwind,
+  SVGNPM,
+  SVGPostman,
+  SVGGradle,
+  SVGGithub,
+  SVGFigma,
+  SVGIdea,
+  SVGPyCharm,
+  SVGVSCode,
+  SVGOpenAI,
 } from '@kp-react-lib/kp-react-common';
 import {
   Brain,
@@ -222,12 +242,12 @@ export const SKILLS_TECHNICAL = [
   {
     title: "Frameworks",
     description: "including other data processing frameworks",
-    content: ["Angular", "React", "Spring Boot", "Node.js", "JUnit/pytest", "Selenium/Playwright", "Jenkins"]
+    content: ["Angular", "React", "Spring Boot", "JUnit/pytest", "Selenium", "Playwright"]
   },
   {
     title: "Tools",
     description: "including the tool I use everyday",
-    content: ["Postman/SoapUI", "Maven", "Git", "Jira", "Figma", "IntelliJ/VSCode/Eclipse", "AI tools (such as ChatGPT,..)"]
+    content: ["Postman/SoapUI", "Maven", "Git", "Jira", "Figma", "IntelliJ/VSCode/Eclipse", "Jenkins", "AI tools (such as ChatGPT,..)"]
   },
   {
     title: "Pattern/APIs",
@@ -371,4 +391,70 @@ export const PER_EXP_SOFT_SKILLS = [
   {icon: BookUser, title: 'experience.details.personal.soft.contributor.title', description: 'experience.details.personal.soft.contributor.description'},
   {icon: Hourglass, title: 'experience.details.personal.soft.time.title', description: 'experience.details.personal.soft.time.description'},
   {icon: BicepsFlexed, title: 'experience.details.personal.soft.adapt.title', description: 'experience.details.personal.soft.adapt.description'},
+]
+
+/**
+ * SKILL PARTS
+ */
+
+export const BACKEND_SKILLS: {icon: IconComponent , description: string}[] = [
+  {icon: SVGJava, description: 'Java'},
+  {icon: SVGSpring, description: 'Spring'},
+  {icon: SVGHibernate, description: 'Hibernate'},
+  {icon: SVGPython, description: 'Python'},
+  {icon: SVGDjango, description: 'Django'},
+  {icon: SVGJavaScript, description: 'JavaScript'},
+  {icon: SVGTypeScript, description: 'TypeScript'},
+  {icon: SVGAI, description: 'AI Injected'},
+]
+
+export const FRONTEND_SKILLS: {icon: IconComponent , description: string}[] = [
+  {icon: SVGAngular, description: 'Angular'},
+  {icon: SVGReact, description: 'React'},
+  {icon: SVGJavaScript, description: 'JavaScript'},
+  {icon: SVGTypeScript, description: 'TypeScript'},
+  {icon: SVGHTML, description: 'HTML'},
+  {icon: SVGCSS, description: 'CSS'},
+  {icon: SVGTailwind, description: 'Tailwind CSS'},
+  {icon: SVGNPM, description: 'NPM'},
+]
+
+export const TOOL_SKILLS: {icon: IconComponent , description: string}[] = [
+  {icon: SVGPostman, description: 'Postman'},
+  {icon: SVGMaven, description: 'Maven'},
+  {icon: SVGGradle, description: 'Gradle'},
+  {icon: SVGGitea, description: 'Gitea'},
+  {icon: SVGGithub, description: 'Github'},
+  {icon: SVGJira, description: 'Jira'},
+  {icon: SVGFigma, description: 'Figma'},
+  {icon: SVGJenkins, description: 'Jenkins'},
+  {icon: SVGIdea, description: 'IntelliJ IDEA'},
+  {icon: SVGPyCharm, description: 'IntelliJ PyCharm'},
+  {icon: SVGVSCode, description: 'VSCode'},
+  {icon: SVGOpenAI, description: 'OpenAI ChatGPT'},
+]
+
+export const BACKEND_SKILLS_CONTENTS: {titleUp: string, titleDown?: string, content: string}[] = [
+  {titleUp: 'skills.backend.java.lang', titleDown: 'skills.backend.java.frameworks', content: 'skills.backend.java.content'},
+  {titleUp: 'skills.backend.python.lang', titleDown: 'skills.backend.python.frameworks', content: 'skills.backend.python.content'},
+  {titleUp: 'skills.backend.js.lang', content: 'skills.backend.js.content'},
+]
+
+export const FRONTEND_SKILLS_CONTENTS: {titleUp: string, titleDown?: string, content: string}[] = [
+  {titleUp: 'skills.frontend.angular.lang', content: 'skills.frontend.angular.content'},
+  {titleUp: 'skills.frontend.react.lang', content: 'skills.frontend.react.content'},
+  {titleUp: 'skills.frontend.ts.lang', content: 'skills.frontend.ts.content'},
+  {titleUp: 'skills.frontend.markup.lang', content: 'skills.frontend.markup.content'},
+  {titleUp: 'skills.frontend.tailwind.lang', content: 'skills.frontend.tailwind.content'},
+]
+
+export const TOOLS_CONTENTS: {titleUp: string, titleDown?: string, content: string}[] = [
+  {titleUp: 'skills.tools.api.title', titleDown: 'skills.tools.api.name', content: 'skills.tools.api.content'},
+  {titleUp: 'skills.tools.build.title', titleDown: 'skills.tools.build.name', content: 'skills.tools.build.content'},
+  {titleUp: 'skills.tools.vc.title', titleDown: 'skills.tools.vc.name', content: 'skills.tools.vc.content'},
+  {titleUp: 'skills.tools.management.title', titleDown: 'skills.tools.management.name', content: 'skills.tools.management.content'},
+  {titleUp: 'skills.tools.ui.title', titleDown: 'skills.tools.ui.name', content: 'skills.tools.ui.content'},
+  {titleUp: 'skills.tools.editor.title', titleDown: 'skills.tools.editor.name', content: 'skills.tools.editor.content'},
+  {titleUp: 'skills.tools.cicd.title', titleDown: 'skills.tools.cicd.name', content: 'skills.tools.cicd.content'},
+  {titleUp: 'skills.tools.ai.title', titleDown: 'skills.tools.ai.name', content: 'skills.tools.ai.content'},
 ]
