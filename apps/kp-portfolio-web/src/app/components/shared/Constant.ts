@@ -36,7 +36,18 @@ import {
   ShieldAlert,
   CheckCircle,
   ShieldCheck,
-  Rows4, FileCode2, RefreshCw, Radar, CopyPlus, Cpu, PenTool, GalleryHorizontalEnd, Rss, FileStack
+  Rows4,
+  FileCode2,
+  RefreshCw,
+  Radar,
+  CopyPlus,
+  Cpu,
+  PenTool,
+  GalleryHorizontalEnd,
+  Rss,
+  FileStack,
+  BicepsFlexed,
+  Hourglass, BookUser, Network, Joystick, Plug, Bot, Atom, Variable, PanelsTopLeft
 } from 'lucide-react';
 import cra_exp from '@/assets/experience_cra.jpg';
 import freelance_exp from '@/assets/freelance.jpg';
@@ -335,4 +346,29 @@ export const KP_EXP_V2_FEATURES = [
   {icon: GalleryHorizontalEnd, title: 'experience.details.kp.v2.feature.profile.title', description: 'experience.details.kp.v2.feature.profile.description'},
   {icon: Rss, title: 'experience.details.kp.v2.feature.scheduling.title', description: 'experience.details.kp.v2.feature.scheduling.description'},
   {icon: FileStack, title: 'experience.details.kp.v2.feature.log.title', description: 'experience.details.kp.v2.feature.log.description'},
+]
+
+export const PER_EXP_EDU_AC = [
+  {icon: PanelsTopLeft, title: 'experience.details.personal.education.ac.web.title', description: 'experience.details.personal.education.ac.web.description'},
+  {icon: TabletSmartphone, title: 'experience.details.personal.education.ac.mobile.title', description: 'experience.details.personal.education.ac.mobile.description'},
+  {icon: Variable, title: 'experience.details.personal.education.ac.backend.title', description: 'experience.details.personal.education.ac.backend.description'},
+  {icon: Webhook, title: 'experience.details.personal.education.ac.restful.title', description: 'experience.details.personal.education.ac.restful.description'},
+]
+
+export const PER_EXP_EDU_UOT_FR = [
+  {icon: Bot, title: 'experience.details.personal.education.uot.automation.title', description: 'experience.details.personal.education.uot.automation.description'},
+  {icon: Atom, title: 'experience.details.personal.education.uot.electronics.title', description: 'experience.details.personal.education.uot.electronics.description'}
+]
+
+export const PER_EXP_EDU_UOT_SR = [
+  {icon: Plug, title: 'experience.details.personal.education.uot.hardware.title', description: 'experience.details.personal.education.uot.hardware.description'},
+  {icon: Network, title: 'experience.details.personal.education.uot.network.title', description: 'experience.details.personal.education.uot.network.description'},
+  {icon: Joystick, title: 'experience.details.personal.education.uot.control.title', description: 'experience.details.personal.education.uot.control.description'}
+]
+
+export const PER_EXP_SOFT_SKILLS = [
+  {icon: Brain, title: 'experience.details.personal.soft.solving.title', description: 'experience.details.personal.soft.solving.description'},
+  {icon: BookUser, title: 'experience.details.personal.soft.contributor.title', description: 'experience.details.personal.soft.contributor.description'},
+  {icon: Hourglass, title: 'experience.details.personal.soft.time.title', description: 'experience.details.personal.soft.time.description'},
+  {icon: BicepsFlexed, title: 'experience.details.personal.soft.adapt.title', description: 'experience.details.personal.soft.adapt.description'},
 ]
