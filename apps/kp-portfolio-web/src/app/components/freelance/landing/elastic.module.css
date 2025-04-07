@@ -5,13 +5,16 @@
 }
 
 .item {
-  width: 15vw;
-  height: 75vh;
+  height: 70vh;
   background-position: center;
-  background-size: 75vh;
+  background-size: 70vh;
   margin: 1vw;
   border-radius: 3vw;
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
+}
+
+.cover {
+  border-radius: 3vw;
 }
