@@ -32,7 +32,7 @@ export function ElasticCardDetail({logo, type, title, period, completed, fullsiz
           trigger={fullsize} delay={0.2} duration={0.8}
           className={'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col'}>
           <div className='text-slate-50 flex flex-col justify-center items-center'>
-            <img src={logo} alt={t(title)} className="object-fit max-w-[200px] rounded-full mb-8"/>
+            <img src={logo} alt={t(title)} className="!opacity-100 object-fit max-w-[200px] rounded-full mb-8"/>
             <h4 className={'clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{type}</h4>
             <h2 className={'text-blue-200 text-4xl clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{title}</h2>
             <h5 className={'clear-both inline-block relative overflow-hidden mb-[0.3em]'} dangerouslySetInnerHTML={{__html: period}}></h5>

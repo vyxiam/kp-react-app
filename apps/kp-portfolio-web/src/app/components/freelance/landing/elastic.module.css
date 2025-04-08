@@ -13,6 +13,9 @@
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
+  img{
+    opacity: 0.62;
+  }
 }
 
 .cover {
