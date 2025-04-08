@@ -2,6 +2,7 @@
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
+  animation: fadeUp 1s ease forwards;
 }
 
 .item {
@@ -20,4 +21,15 @@
 
 .cover {
   border-radius: 3vw;
+}
+
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0)
+  }
 }

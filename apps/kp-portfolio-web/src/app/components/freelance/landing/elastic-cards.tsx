@@ -123,7 +123,8 @@ export function ElasticCards({content} : {content: ElasticProps[]}) {
       {content.map((item, index) => (
         <div
           key={uuid()} ref={(el) => {toggleRefs.current[index] = el}}
-          className={`${styles.item} w-[${itemWidth}] relative`} onClick={() => handleClick(index)}
+          style={{width: itemWidth}}
+          className={`${styles.item} relative`} onClick={() => handleClick(index)}
         >
           <img src={item.img} alt={item.title} className={`absolute object-cover w-full h-full ${styles.cover} ${expandedIndex === index? '!opacity-100':''}`}/>
           <Reveal duration={0.1} delay={0.5} className={`opacity-0 transition-opacity duration-200 ${expandedIndex === index ? 'z-5 !opacity-100 duration-500 delay-200':''} relative h-full w-full`}>
