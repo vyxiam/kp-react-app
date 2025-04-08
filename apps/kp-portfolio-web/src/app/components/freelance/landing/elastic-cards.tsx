@@ -1,7 +1,9 @@
-import { uuid } from '@kp-react-lib/kp-react-common';
+import { Reveal, uuid } from '@kp-react-lib/kp-react-common';
 import { gsap } from 'gsap';
 import styles from './elastic.module.css'
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import ElasticCardDetail from '@/app/components/freelance/landing/elastic-card-detail';
 
 function getItemWidth(totalCards: number): [string, string, string, string]{
   const perItem = 75/totalCards
@@ -12,9 +14,11 @@ function getItemWidth(totalCards: number): [string, string, string, string]{
 
 interface ElasticProps{
   img: string;
-  location: string;
+  logo: string;
+  type: string;
   title: string;
   period: string;
+  completed: boolean;
 }
 
 export function ElasticCards({content, test}:{content: ElasticProps[], test: string[]}) {
@@ -27,6 +31,8 @@ export function ElasticCards({content, test}:{content: ElasticProps[], test: str
   };
 
   const animations: gsap.core.Tween[] = [];
+  const {t} = useTranslation()
+  document.documentElement.classList.add('dark');
 
   useEffect(() => {
     gsap.set(toggleRefs.current, { width: "15vw" });
@@ -46,7 +52,7 @@ export function ElasticCards({content, test}:{content: ElasticProps[], test: str
           ease: 'elastic(1, .3)'
         });
       }
-      else if (index === previousState.current.index){
+      else if (index === previousState.current.index && wasExpanded){
         // Animate clicked item to COLLAPSE
         animation = gsap.fromTo(item,
           { width: maxItemWidth},
@@ -54,6 +60,17 @@ export function ElasticCards({content, test}:{content: ElasticProps[], test: str
             width: itemWidth,
             duration: 2.5,
             ease: "elastic(1, 0.3)"
+          }
+        );
+      }
+      else if (index === previousState.current.index && !wasExpanded){
+        // Animate clicked item to COLLAPSE and other is EXPANDING
+        animation = gsap.fromTo(item,
+          { width: maxItemWidth},
+          {
+            width: minItemWidth,
+            duration: 2.5,
+            ease: "elastic(1, 0.6)"
           }
         );
       }
@@ -106,9 +123,12 @@ export function ElasticCards({content, test}:{content: ElasticProps[], test: str
       {content.map((item, index) => (
         <div
           key={uuid()} ref={(el) => {toggleRefs.current[index] = el}}
-          className={`${styles.item} ${test[index]} w-[${itemWidth}]`} onClick={() => handleClick(index)}
+          className={`${styles.item} ${test[index]} w-[${itemWidth}] relative`} onClick={() => handleClick(index)}
         >
-          <img src={item.img} alt={item.title} className={`object-cover w-full h-full ${styles.cover}`}/>
+          <img src={item.img} alt={item.title} className={`absolute object-cover w-full h-full ${styles.cover}`}/>
+          <Reveal duration={0.1} delay={0.5} className={`opacity-0 transition-opacity duration-200 ${expandedIndex === index ? 'z-5 opacity-100 duration-500 delay-200':''} relative h-full w-full`}>
+            <ElasticCardDetail reveal={()=> console.log('')} fullsize={expandedIndex === index} logo={item.logo} title={t(item.title)} type={t(item.type)} period={t(item.period)} completed={item.completed}/>
+          </Reveal>
         </div>
       ))}
     </section>

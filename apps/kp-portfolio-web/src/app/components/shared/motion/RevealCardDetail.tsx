@@ -1,13 +1,15 @@
-import { motion } from 'framer-motion';
+import { motion, Variant } from 'framer-motion';
 import { ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   className?: string;
   duration: number;
   delay?: number;
-  trigger: any
+  trigger: any;
+  hiddenV?: Variant;
+  visibleV?: Variant;
 }
-export function RevealCardDetail({children, duration, delay, className, trigger}: Props) {
+export function RevealCardDetail({children, duration, delay, className, trigger, hiddenV = {opacity: 0, x: -125}, visibleV = {opacity: 1, x: 0}}: Props) {
   if(!delay){
     delay = 0
   }
@@ -21,8 +23,8 @@ export function RevealCardDetail({children, duration, delay, className, trigger}
       className={className}
       key={trigger}
       variants={{
-        'hidden': {opacity: 0, x: -125},
-        'visible': {opacity: 1, x: 0}
+        'hidden': hiddenV,
+        'visible': visibleV
       }}
       initial='hidden'
       animate='visible'

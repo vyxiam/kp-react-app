@@ -69,9 +69,13 @@ import {
   BicepsFlexed,
   Hourglass, BookUser, Network, Joystick, Plug, Bot, Atom, Variable, PanelsTopLeft
 } from 'lucide-react';
-import cra_exp from '@/assets/experience_cra.jpg';
-import freelance_exp from '@/assets/freelance.jpg';
-import school_exp from '@/assets/school.jpg';
+import CRA_EXP from '@/assets/experience_cra.jpg';
+import FREELANCE_EXP from '@/assets/freelance_exp.jpeg';
+import PERSONAL_EXP from '@/assets/personal_exp.jpg';
+import KP_LOGO from '@/assets/KP_small.jpg'
+import KP_V1 from '@/assets/KP_v1.jpeg'
+import KP_V2 from '@/assets/KP_v2.jpg'
+import VACODE_LOGO from '@/assets/code-v-square.png'
 import DetailsComponentCounter from '@/app/components/experience/experience-components/details/shared/details-component-counter';
 import DetailsImproveCounter
   from '@/app/components/experience/experience-components/details/shared/details-improve-counter';
@@ -285,19 +289,19 @@ export const SKILLS_SOFT = [
 
 export const EXPERIENCE_CARDS = [
   {
-    img: cra_exp,
+    img: CRA_EXP,
     location: 'experience.cra.location',
     title: 'experience.cra.title',
     period: 'experience.cra.period'
   },
   {
-    img: freelance_exp,
+    img: FREELANCE_EXP,
     location: 'experience.karport.location',
     title: 'experience.karport.title',
     period: 'experience.karport.period'
   },
   {
-    img: school_exp,
+    img: PERSONAL_EXP,
     location: 'experience.personal.location',
     title: 'experience.personal.title',
     period: 'experience.personal.period'
@@ -457,4 +461,35 @@ export const TOOLS_CONTENTS: {titleUp: string, titleDown?: string, content: stri
   {titleUp: 'skills.tools.editor.title', titleDown: 'skills.tools.editor.name', content: 'skills.tools.editor.content'},
   {titleUp: 'skills.tools.cicd.title', titleDown: 'skills.tools.cicd.name', content: 'skills.tools.cicd.content'},
   {titleUp: 'skills.tools.ai.title', titleDown: 'skills.tools.ai.name', content: 'skills.tools.ai.content'},
+]
+
+/**
+ * FREELANCE PROJECTS
+ */
+
+export const FREELANCE_CARDS = [
+  {
+    img: KP_V1,
+    logo: KP_LOGO,
+    type: 'freelance.project.kp.v1.type',
+    title: 'freelance.project.kp.v1.title',
+    period: 'freelance.project.kp.v1.period',
+    completed: true
+  },
+  {
+    img: KP_V2,
+    logo: KP_LOGO,
+    type: 'freelance.project.kp.v2.type',
+    title: 'freelance.project.kp.v2.title',
+    period: 'freelance.project.kp.v2.period',
+    completed: false
+  },
+  {
+    img: PERSONAL_EXP,
+    logo: VACODE_LOGO,
+    type: 'freelance.project.vacode.type',
+    title: 'freelance.project.vacode.title',
+    period: 'freelance.project.vacode.period',
+    completed: true
+  },
 ]

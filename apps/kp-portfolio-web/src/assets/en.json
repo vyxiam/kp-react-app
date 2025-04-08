@@ -264,5 +264,17 @@
   "skills.tools.ai.name": "ChatGPT",
   "skills.tools.ai.content": "<ul class='list-disc ml-8'><li>Used as intelligent assistants rather than code generators</li><li>Assist in <strong>verifying debugging logic</strong>, <strong>exploring edge cases</strong>, and <strong>validating design decisions</strong></li><li>Help <strong>identify potential flaws</strong> in implementation ideas before coding</li><li>Useful for <strong>quick syntax recall</strong>, <strong>API reference</strong>, and <strong>code pattern suggestions</strong></li><li>Support continuous learning by providing <strong>explanations</strong>, <strong>clarifications</strong>, and <strong>best practices</strong> across technologies</li></ul>",
   "freelance.page.title": "Freelance Projects",
-  "this.page.title": "Project: This website"
+  "freelance.projects.check.out": "Check out",
+  "freelance.projects.completed": "Completed",
+  "freelance.projects.development": "In development",
+  "freelance.project.kp.v1.type": "Windows | Bot | Software",
+  "freelance.project.kp.v1.title": "Project: KP ver.1",
+  "freelance.project.kp.v1.period": "in 2024",
+  "freelance.project.kp.v2.type": "Windows | Bot | Software",
+  "freelance.project.kp.v2.title": "Project: KP ver.2",
+  "freelance.project.kp.v2.period": "since 2024",
+  "freelance.project.vacode.type": "Web Development",
+  "freelance.project.vacode.title": "Project: VA-CODE",
+  "freelance.project.vacode.period": "in 2025",
+  "this.page.title": "Project: VA-CODE"
 }

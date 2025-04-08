@@ -18,7 +18,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <I18nextProvider i18n={i18n}>
-          <KPHeader mainLogo={<WebLogo/>} mainTitle={'CODE-V'} navbarProps={NAV_PROPS} langs={LANGUAGES} i18n={i18n}/>
+          <KPHeader mainLogo={<WebLogo/>} mainTitle={'VA-CODE'} navbarProps={NAV_PROPS} langs={LANGUAGES} i18n={i18n}/>
           <App />
           <KPFooter props={FOOTER_PROPS} i18n={i18n}/>
       </I18nextProvider>
