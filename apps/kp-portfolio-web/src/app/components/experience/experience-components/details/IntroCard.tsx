@@ -1,9 +1,9 @@
 import DetailsIntro from '@/app/components/experience/experience-components/details/details-intro';
 import { useTranslation } from 'react-i18next';
-import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface IntroProps{
-  setIntroStatus: Dispatch<SetStateAction<boolean>>
+  setIntroStatus: () => void
   location: string;
   positionHighlight: string;
   position: string;
@@ -17,7 +17,7 @@ export function IntroCard({setIntroStatus, location, positionHighlight, position
 
   useEffect(() => {
     if (introAni){
-      setIntroStatus(true)
+      setIntroStatus()
     }
   }, [introAni]);
 

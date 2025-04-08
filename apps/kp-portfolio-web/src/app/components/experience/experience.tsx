@@ -1,6 +1,6 @@
 import PageTitle from '../shared/page-title';
 import ExpandingCards from '@/app/components/experience/experience-components/landing/expanding-cards';
-import { RefObject, useCallback, useEffect, useRef, useState } from 'react';
+import { RefObject, useCallback, useRef, useState } from 'react';
 import CRA from '@/app/components/experience/experience-components/details/CRA';
 import Karport from '@/app/components/experience/experience-components/details/Karport';
 import Personal from '@/app/components/experience/experience-components/details/personal';
@@ -10,7 +10,6 @@ import IntroCard from '@/app/components/experience/experience-components/details
 export function Experience() {
   const pageTitleRef = useRef<HTMLDivElement>(null)
   const refs:RefObject<(HTMLElement | null)>[] = [pageTitleRef]
-  const [introDone, setIntroDone] = useState<boolean>(false)// intro for each session
   const [activeExp, setActiveExp] = useState<number>(-1); // active session
 
   /**
@@ -20,6 +19,11 @@ export function Experience() {
   const revealExp = useCallback((index: number) => {
     setActiveExp(index)
   }, [])
+
+  const setIntroDone = ()=> {
+    hideElements(false)
+  }
+
   const hideElements = (hide: boolean) => {
     const headers = document.documentElement.getElementsByTagName('header')
     if (hide){
@@ -61,7 +65,7 @@ export function Experience() {
         return (
           <IntroCard setIntroStatus={setIntroDone}
                      location={"experience.details.intro.location.freelance"} year={"experience.details.intro.year.2024"}
-                     positionHighlight={"experience.details.intro.position.highlight.back.end"}
+                     positionHighlight={"experience.details.intro.position.highlight.backend"}
                      position={"experience.details.intro.position.developer"}>
             <Karport revealFunc={revealExp}/></IntroCard>)
       case 2:
@@ -69,20 +73,14 @@ export function Experience() {
         return (
           <IntroCard setIntroStatus={setIntroDone}
                      location={"experience.details.intro.location.personal"} year={"experience.details.intro.year.2021"}
-                     positionHighlight={"experience.details.intro.position.highlight.software"}
-                     position={"experience.details.intro.position.developer"}>
+                     positionHighlight={"experience.details.intro.position.highlight.computer"}
+                     position={"experience.details.intro.position.programmer"}>
             <Personal revealFunc={revealExp}/></IntroCard>)
       default:
         hideElements(false)
         return <ExpandingCards revealFunc={revealExp}/>
     }
   }
-
-  useEffect(() => {
-    if (introDone){
-      hideElements(!introDone)
-    }
-  }, [introDone]);
 
   return (
     <>
