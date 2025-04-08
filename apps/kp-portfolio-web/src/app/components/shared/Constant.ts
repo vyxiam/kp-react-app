@@ -67,14 +67,15 @@ import {
   Rss,
   FileStack,
   BicepsFlexed,
-  Hourglass, BookUser, Network, Joystick, Plug, Bot, Atom, Variable, PanelsTopLeft
+  Hourglass, BookUser, Network, Joystick, Plug, Bot, Atom, Variable, PanelsTopLeft, Github, Linkedin, Mail
 } from 'lucide-react';
 import CRA_EXP from '@/assets/experience_cra.jpg';
 import FREELANCE_EXP from '@/assets/freelance_exp.jpeg';
-import PERSONAL_EXP from '@/assets/personal_exp.jpg';
+import PERSONAL_EXP from '@/assets/personal_exp.png';
 import KP_LOGO from '@/assets/KP_small.jpg'
 import KP_V1 from '@/assets/KP_v1.jpeg'
-import KP_V2 from '@/assets/KP_v2.jpg'
+import KP_V2 from '@/assets/KP_v2.png'
+import PROJECT_VACODE from '@/assets/project_vacode.png'
 import VACODE_LOGO from '@/assets/code-v-square.png'
 import DetailsComponentCounter from '@/app/components/experience/experience-components/details/shared/details-component-counter';
 import DetailsImproveCounter
@@ -155,6 +156,12 @@ export const HOME_HIGHLIGHTS = [
     description: "highlights.card.problem.solving.description",
     icon: Brain,
   },
+]
+
+export const HOME_SOCIAL = [
+  {item: Linkedin, title: 'Linkedin', link: 'https://www.linkedin.com/in/vyxnguyen/'},
+  {item: Github, title: 'Github', link: 'https://github.com/vyxiam'},
+  {item: Mail, title: 'Email', link: 'mailto:&#118;&#120;&#121;&#46;&#110;&#103;&#117;&#121;&#101;&#110;&#96;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'},
 ]
 
 /**
@@ -485,7 +492,7 @@ export const FREELANCE_CARDS = [
     completed: false
   },
   {
-    img: PERSONAL_EXP,
+    img: PROJECT_VACODE,
     logo: VACODE_LOGO,
     type: 'freelance.project.vacode.type',
     title: 'freelance.project.vacode.title',
