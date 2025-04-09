@@ -6,6 +6,7 @@ import PaidFreelance from '@/app/components/summary/summary-components/paid-free
 import Skills from '@/app/components/summary/summary-components/skills';
 
 export function Summary() {
+  document.documentElement.classList.remove('dark');
   return (
     <>
       <PageTitle title={'summary.page.title'}/>

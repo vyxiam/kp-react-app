@@ -42,9 +42,9 @@ export function PaidFreelance() {
                 >
                   <summary.icon className="h-4 w-4 sm:h-6 sm:w-6" aria-hidden="true" />
                 </motion.div>
-                <p className="ml-16 text-lg leading-6 font-medium text-foreground">{summary.title}</p>
+                <p className="ml-16 text-lg leading-6 font-medium text-foreground">{t(summary.title)}</p>
               </dt>
-              <dd className="mt-2 ml-16 text-base text-muted-foreground">{summary.description}</dd>
+              <dd className="mt-2 ml-16 text-base text-muted-foreground">{t(summary.description)}</dd>
             </motion.div>
           ))}
         </dl>

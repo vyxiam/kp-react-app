@@ -36,8 +36,8 @@ export function Experience() {
               <summary.icon className="w-6 h-6"/>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">{summary.title}</h3>
-              <p>{summary.description}</p>
+              <h3 className="text-xl font-semibold mb-2">{t(summary.title)}</h3>
+              <p>{t(summary.description)}</p>
             </div>
           </motion.div>
         ))}

@@ -103,6 +103,7 @@ import VACODE_LOGO from '@/assets/code-v-square.png'
 import DetailsComponentCounter from '@/app/components/experience/experience-components/details/shared/details-component-counter';
 import DetailsImproveCounter
   from '@/app/components/experience/experience-components/details/shared/details-improve-counter';
+import { IconLogoNode } from '@/app/components/shared/logo-node';
 
 const CURRENT_VERSION = getAppVersion()
 /**
@@ -117,6 +118,7 @@ const NAV_ITEMS: NavItem[] = [
 const NAV_ABOUT_CONTENTS: NavContent[] = [
   {
     fullContent: true,
+    fullContentIcon: IconLogoNode,
     title: "nav.about.summary.title",
     link: "/summary",
     description: "nav.about.summary.description",
@@ -203,66 +205,66 @@ export const FOOTER_PROPS: KPFooterProps = {
 
 export const CRA_SUMMARY = [
   {
-    title: "Develop Angular library",
-    description: "to streamline development across multiple projects, reducing effort and improving efficiency.",
+    title: "summary.experience.cra.library.title",
+    description: "summary.experience.cra.library.description",
     icon: Star,
   },
   {
-    title: "Build web applications",
-    description: "using Angular and Java EE, applying software design patterns such as OOP, MVVM, MVP, etc.",
+    title: "summary.experience.cra.web.title",
+    description: "summary.experience.cra.web.description",
     icon: Star,
   },
   {
-    title: "Collect and analyze business requirements",
-    description: "to deliver optimized, scalable, and complete solutions.",
+    title: "summary.experience.cra.requirements.title",
+    description: "summary.experience.cra.requirements.description",
     icon: Star,
   },
   {
-    title: "Investigate technical issues",
-    description: "by identifying root causes and implementing effective solutions",
+    title: "summary.experience.cra.issues.title",
+    description: "summary.experience.cra.issues.description",
     icon: Star,
   },
   {
-    title: "Create Unit testing",
-    description: "using JUnit and SoapUI, ensuring software quality and reliability.",
+    title: "summary.experience.cra.unit.title",
+    description: "summary.experience.cra.unit.description",
     icon: Star,
   },
   {
-    title: "Manage file system operations",
-    description: "such as file upload, download, editing, and removal, ensuring security and reliability\n",
+    title: "summary.experience.cra.backend.title",
+    description: "summary.experience.cra.backend.description",
     icon: Star,
   },
 ]
 
 export const FREELANCE_SUMMARY = [
   {
-    title: "Written in Python",
-    description: "to streamline development across multiple projects, reducing effort and improving efficiency.",
+    title: "summary.paid.reference.bot.title",
+    description: "summary.paid.reference.bot.description",
     icon: Terminal,
   },
   {
-    title: "Automation Process",
-    description: "using Angular and Java EE, applying software design patterns such as OOP, MVVM, MVP, etc.",
+    title: "summary.paid.reference.flow.title",
+    description: "summary.paid.reference.flow.description",
     icon: Repeat,
   },
   {
-    title: "Data Structure",
-    description: "to deliver optimized, scalable, and complete solutions.",
+    title: "summary.paid.reference.data.title",
+    description: "summary.paid.reference.data.description",
     icon: Database,
   },
   {
-    title: "RESTful API",
-    description: "by identifying root causes and implementing effective solutions",
+    title: "summary.paid.reference.logic.title",
+    description: "summary.paid.reference.logic.description",
     icon: Webhook,
   },
   {
-    title: "Virtual Machines",
-    description: "using JUnit and SoapUI, ensuring software quality and reliability.",
+    title: "summary.paid.reference.maintenance.title",
+    description: "summary.paid.reference.maintenance.description",
     icon: Monitor,
   },
   {
-    title: "System Management",
-    description: "such as file upload, download, editing, and removal, ensuring security and reliability\n",
+    title: "summary.paid.reference.schedule.title",
+    description: "summary.paid.reference.schedule.description",
     icon: FolderKanban,
   },
 ]
