@@ -21,6 +21,11 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  css: {
+    modules: {
+      generateScopedName: '_[local]_[hash:base64:5]'
+    }
+  },
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
