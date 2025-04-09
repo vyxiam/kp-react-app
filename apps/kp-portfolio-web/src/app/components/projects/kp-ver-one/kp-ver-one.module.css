@@ -1,7 +1,5 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.cursive{
+  font-family: "Kaushan Script", cursive;
+  font-style: normal;
+  font-weight: normal;
+}

@@ -80,7 +80,17 @@ import {
   Linkedin,
   Mail,
   HdmiPort,
-  Antenna, LayoutTemplate, BookOpenCheck, Crosshair, SpellCheck, Calculator
+  Antenna,
+  LayoutTemplate,
+  BookOpenCheck,
+  Crosshair,
+  SpellCheck,
+  Calculator,
+  Tv,
+  KeyRound,
+  BrainCircuit,
+  Navigation,
+  Infinity
 } from 'lucide-react';
 import CRA_EXP from '@/assets/experience_cra.jpg';
 import FREELANCE_EXP from '@/assets/freelance_exp.jpeg';
@@ -127,7 +137,7 @@ const NAV_ABOUT_CONTENTS: NavContent[] = [
 const NAV_PROJECT_CONTENTS: NavContent[] = [
   {
     title: "nav.projects.content.page.title",
-    link: "/freelance-this-page",
+    link: "/project-va-code",
     description: "nav.projects.content.page.description",
   },
   {
@@ -494,6 +504,7 @@ export const FREELANCE_CARDS = [
     type: 'freelance.project.kp.v1.type',
     title: 'freelance.project.kp.v1.title',
     period: 'freelance.project.kp.v1.period',
+    link: '/project-kp-ver-1',
     completed: true
   },
   {
@@ -502,6 +513,7 @@ export const FREELANCE_CARDS = [
     type: 'freelance.project.kp.v2.type',
     title: 'freelance.project.kp.v2.title',
     period: 'freelance.project.kp.v2.period',
+    link: '/project-kp-ver-2',
     completed: false
   },
   {
@@ -510,6 +522,7 @@ export const FREELANCE_CARDS = [
     type: 'freelance.project.vacode.type',
     title: 'freelance.project.vacode.title',
     period: 'freelance.project.vacode.period',
+    link: '/project-va-code',
     completed: true
   },
 ]
@@ -545,4 +558,15 @@ export const PRO_KP_V1_SHOWCASE = [
   {icon: Crosshair, title: 'project.kp.v1.ui.showcase.accuracy.title', description: 'project.kp.v1.ui.showcase.accuracy.description'},
   {icon: SpellCheck, title: 'project.kp.v1.ui.showcase.self.title', description: 'project.kp.v1.ui.showcase.self.description'},
   {icon: Calculator, title: 'project.kp.v1.ui.showcase.natural.title', description: 'project.kp.v1.ui.showcase.natural.description'},
+]
+
+export const PRO_KP_V1_FEATURE_FR = [
+  {icon: Tv, title: 'project.kp.v1.features.watch.title', description: 'project.kp.v1.features.watch.description'},
+  {icon: KeyRound, title: 'project.kp.v1.features.checkin.title', description: 'project.kp.v1.features.checkin.description'}
+]
+
+export const PRO_KP_V1_FEATURE_SR = [
+  {icon: BrainCircuit, title: 'project.kp.v1.features.decision.title', description: 'project.kp.v1.features.decision.description'},
+  {icon: Infinity, title: 'project.kp.v1.features.loop.title', description: 'project.kp.v1.features.loop.description'},
+  {icon: Navigation, title: 'project.kp.v1.features.navigation.title', description: 'project.kp.v1.features.navigation.description'}
 ]

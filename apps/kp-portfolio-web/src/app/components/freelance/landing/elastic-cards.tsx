@@ -4,6 +4,7 @@ import styles from './elastic.module.css'
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ElasticCardDetail from '@/app/components/freelance/landing/elastic-card-detail';
+import { useNavigate } from 'react-router';
 
 function getItemWidth(totalCards: number): [string, string, string, string]{
   const perItem = 75/totalCards
@@ -18,6 +19,7 @@ interface ElasticProps{
   type: string;
   title: string;
   period: string;
+  link: string;
   completed: boolean;
 }
 
@@ -32,6 +34,7 @@ export function ElasticCards({content} : {content: ElasticProps[]}) {
 
   const animations: gsap.core.Tween[] = [];
   const {t} = useTranslation()
+  const navigate = useNavigate()
   document.documentElement.classList.add('dark');
 
   useEffect(() => {
@@ -128,7 +131,7 @@ export function ElasticCards({content} : {content: ElasticProps[]}) {
         >
           <img src={item.img} alt={item.title} className={`absolute object-cover w-full h-full ${styles.cover} ${expandedIndex === index? '!opacity-100':''}`}/>
           <Reveal duration={0.1} delay={0.5} className={`opacity-0 transition-opacity duration-200 ${expandedIndex === index ? 'z-5 !opacity-100 duration-500 delay-200':''} relative h-full w-full`}>
-            <ElasticCardDetail reveal={()=> console.log('')} fullsize={expandedIndex === index} logo={item.logo} title={t(item.title)} type={t(item.type)} period={t(item.period)} completed={item.completed}/>
+            <ElasticCardDetail reveal={()=> navigate(item.link)} fullsize={expandedIndex === index} logo={item.logo} title={t(item.title)} type={t(item.type)} period={t(item.period)} completed={item.completed}/>
           </Reveal>
         </div>
       ))}
