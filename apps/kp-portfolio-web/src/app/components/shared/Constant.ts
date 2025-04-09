@@ -67,7 +67,20 @@ import {
   Rss,
   FileStack,
   BicepsFlexed,
-  Hourglass, BookUser, Network, Joystick, Plug, Bot, Atom, Variable, PanelsTopLeft, Github, Linkedin, Mail
+  Hourglass,
+  BookUser,
+  Network,
+  Joystick,
+  Plug,
+  Bot,
+  Atom,
+  Variable,
+  PanelsTopLeft,
+  Github,
+  Linkedin,
+  Mail,
+  HdmiPort,
+  Antenna, LayoutTemplate, BookOpenCheck, Crosshair, SpellCheck, Calculator
 } from 'lucide-react';
 import CRA_EXP from '@/assets/experience_cra.jpg';
 import FREELANCE_EXP from '@/assets/freelance_exp.jpeg';
@@ -499,4 +512,37 @@ export const FREELANCE_CARDS = [
     period: 'freelance.project.vacode.period',
     completed: true
   },
+]
+
+
+/**
+ * PROJECT: KP
+ */
+
+export const PRO_KP_V1_UI_UX = [
+  {icon: HdmiPort, title: 'project.kp.v1.ui.panel.title', description: 'project.kp.v1.ui.panel.description'},
+  {icon: Rows4, title: 'project.kp.v1.ui.task.title', description: 'project.kp.v1.ui.task.description'},
+  {icon: Antenna, title: 'project.kp.v1.ui.status.title', description: 'project.kp.v1.ui.status.description'},
+  {icon: LayoutTemplate, title: 'project.kp.v1.ui.preset.title', description: 'project.kp.v1.ui.preset.description'},
+]
+
+export const PRO_KP_V1_GENERAL_POINTS = [
+  {icon: CheckCircle, content: 'project.kp.v1.ui.general.vpn'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.general.system'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.general.multiple'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.general.preset'}
+]
+
+export const PRO_KP_V1_RUN_POINTS = [
+  {icon: CheckCircle, content: 'project.kp.v1.ui.run.timeout'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.run.schedule'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.run.workflow'},
+  {icon: CheckCircle, content: 'project.kp.v1.ui.run.flexible'}
+]
+
+export const PRO_KP_V1_SHOWCASE = [
+  {icon: BookOpenCheck, title: 'project.kp.v1.ui.showcase.cross.title', description: 'project.kp.v1.ui.showcase.cross.description'},
+  {icon: Crosshair, title: 'project.kp.v1.ui.showcase.accuracy.title', description: 'project.kp.v1.ui.showcase.accuracy.description'},
+  {icon: SpellCheck, title: 'project.kp.v1.ui.showcase.self.title', description: 'project.kp.v1.ui.showcase.self.description'},
+  {icon: Calculator, title: 'project.kp.v1.ui.showcase.natural.title', description: 'project.kp.v1.ui.showcase.natural.description'},
 ]
