@@ -5,7 +5,7 @@ import App from './app/app';
 import "./i18n"
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
-import { FOOTER_PROPS, LANGUAGES, NAV_PROPS } from '@/app/components/shared/Constant';
+import { DRAWER_MENU_PROPS, FOOTER_PROPS, LANGUAGES, NAV_PROPS } from '@/app/components/shared/Constant';
 import { KPFooter, KPHeader } from '@kp-react-lib/kp-react-common';
 import '@kp-react-lib/kp-react-common/dist/index.css'
 import WebLogo from '@/app/components/shared/WebLogo';
@@ -18,7 +18,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <I18nextProvider i18n={i18n}>
-          <KPHeader mainLogo={<WebLogo/>} mainTitle={'VA-CODE'} navbarProps={NAV_PROPS} langs={LANGUAGES} i18n={i18n}/>
+          <KPHeader mainLogo={<WebLogo/>} mainTitle={'VA-CODE'} navbarProps={NAV_PROPS} drawerMenuProps={DRAWER_MENU_PROPS} langs={LANGUAGES} i18n={i18n}/>
           <App />
           <KPFooter props={FOOTER_PROPS} i18n={i18n}/>
       </I18nextProvider>

@@ -33,6 +33,7 @@ import {
   SVGPyCharm,
   SVGVSCode,
   SVGOpenAI,
+  DrawerMenuProps,
 } from '@kp-react-lib/kp-react-common';
 import {
   Brain,
@@ -115,6 +116,10 @@ const NAV_ITEMS: NavItem[] = [
   {title: 'nav.item.projects', link: '/projects', className: 'grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'}
 ]
 
+const NAV_HAM_TITLES = ['nav.item.home', "nav.about.summary.title", "nav.about.experience.title", "nav.about.skills.title", "nav.item.projects"]
+
+const NAV_HAM_LINKS= ['/','/summary','/detailed-experience','detailed-skills','/freelance-projects']
+
 const NAV_ABOUT_CONTENTS: NavContent[] = [
   {
     fullContent: true,
@@ -149,6 +154,8 @@ const NAV_PROJECT_CONTENTS: NavContent[] = [
     description: "nav.projects.content.freelance.description",
   }
 ]
+
+export const DRAWER_MENU_PROPS: DrawerMenuProps = {titles: NAV_HAM_TITLES, links: NAV_HAM_LINKS}
 
 export const NAV_PROPS: KPNavBarProps = {items: NAV_ITEMS, contents: [null, NAV_ABOUT_CONTENTS, NAV_PROJECT_CONTENTS]}
 
