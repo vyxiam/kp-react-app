@@ -18,6 +18,7 @@ import DetailsParaMidFourPointsInline
 import ToOtherExp from '@/app/components/experience/experience-components/to-other-exp';
 
 export function Personal({revealFunc}:{revealFunc: (index: number) => void}) {
+  document.documentElement.classList.remove('dark');
   const {t} = useTranslation()
   return (
     <section>

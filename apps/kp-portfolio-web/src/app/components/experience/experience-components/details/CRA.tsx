@@ -27,6 +27,7 @@ interface ExpProps{
 }
 
 export function CRA({revealFunc}: ExpProps) {
+  document.documentElement.classList.remove('dark');
   const {t} = useTranslation()
   return (
     <section>

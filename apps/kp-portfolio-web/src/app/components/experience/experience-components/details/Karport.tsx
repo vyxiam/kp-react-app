@@ -20,6 +20,7 @@ import { ArrowRight } from 'lucide-react';
 import KP_LOGO from '@/assets/kp.jpg';
 
 export function Karport({revealFunc}:{revealFunc: (index: number) => void}) {
+  document.documentElement.classList.remove('dark');
   const {t} = useTranslation()
   const navigate = useNavigate()
   return (

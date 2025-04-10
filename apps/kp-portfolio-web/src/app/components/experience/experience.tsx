@@ -6,8 +6,14 @@ import Karport from '@/app/components/experience/experience-components/details/K
 import Personal from '@/app/components/experience/experience-components/details/personal';
 import styles from './experience.module.css'
 import IntroCard from '@/app/components/experience/experience-components/details/IntroCard';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { EXPERIENCE_CARDS } from '@/app/components/shared/Constant';
+import { Card, CardContent } from '@/components/ui/card';
+import { KPOutlineButton, Reveal } from '@kp-react-lib/kp-react-common';
+import { useTranslation } from 'react-i18next';
 
 export function Experience() {
+  const {t} = useTranslation()
   const pageTitleRef = useRef<HTMLDivElement>(null)
   const refs:RefObject<(HTMLElement | null)>[] = [pageTitleRef]
   const [activeExp, setActiveExp] = useState<number>(-1); // active session
@@ -82,12 +88,76 @@ export function Experience() {
     }
   }
 
+  const [mobileRender, setMobileRender] = useState(-1)
+
+  const requestRender = (index: number) => {
+    setMobileRender(index)
+  }
+
+  const revealMobile = useCallback((index: number) => {
+    setMobileRender(-1)
+  }, [])
+
+  const renderMobile = () => {
+    switch(mobileRender){
+      case 1:
+        document.documentElement.classList.remove('dark');
+        return (
+          <CRA revealFunc={revealMobile}/>
+        )
+      case 2:
+        document.documentElement.classList.remove('dark');
+        return(
+          <Karport revealFunc={revealMobile}/>
+        )
+      case 3:
+        document.documentElement.classList.remove('dark');
+        return(
+          <Personal revealFunc={revealMobile}/>
+        )
+      default:
+        document.documentElement.classList.add('dark');
+        return null
+    }
+  }
+
   return (
     <>
       <PageTitle ref={pageTitleRef} title={'experience.page.title'}/>
-      <>
+      <div className='hidden md:block'>
         {renderExp()}
-      </>
+      </div>
+      {
+        mobileRender === -1?<Reveal className='md:hidden flex flex-col justify-center items-center'>
+          <Carousel className="w-full max-w-xs sm:max-w-md h-full sm:max-h-md max-h-xs flex flex-col">
+            <CarouselContent>
+              {EXPERIENCE_CARDS.map((item, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-0">
+                    <Card>
+                      <CardContent className="flex flex-col items-center justify-center">
+                        <img src={item.img} alt={item.title} className={`aspect-square w-full h-full object-cover object-center`}/>
+                        <h4 className={'clear-both inline-block relative uppercase overflow-hidden my-[0.5em]'}>{t(item.location)}</h4>
+                        <h2 className={'text-blue-200 text-4xl text-center clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{t(item.title)}</h2>
+                        <h5 className={'clear-both inline-block relative overflow-hidden mb-[0.3em]'} dangerouslySetInnerHTML={{__html: t(item.period)}}></h5>
+                        <div className='flex justify-center z-50'>
+                          <KPOutlineButton text={t('experience.card.reveal')} onClick={() => requestRender(index + 1)}/>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className=""/>
+            <CarouselNext className=""/>
+          </Carousel>
+        </Reveal>:''
+      }
+
+      <div className='md:hidden'>
+        {mobileRender?renderMobile():''}
+      </div>
     </>
   );
 }
