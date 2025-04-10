@@ -38,7 +38,7 @@ export function MyName() {
           </p></Reveal>
         </div>
         <Reveal delay={0.3}><div className="flex gap-4 flex-col sm:flex-row">
-            <DotPrimaryButton onClick={() => navigate('/detailed-experience')} text={t('summary.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
+            <DotPrimaryButton onClick={() => navigate('/detailed-experience')} text={t('summary.primary.button')} offset={0.06}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
             <KPOutlineButton onClick={() => navigate('/detailed-skills')} text={t('summary.secondary.button.skills')}/>
             <KPOutlineButton onClick={() => navigate('/freelance-projects')} text={t('summary.secondary.button.projects')}/>
         </div></Reveal>

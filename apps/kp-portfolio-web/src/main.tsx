@@ -9,6 +9,7 @@ import { DRAWER_MENU_PROPS, FOOTER_PROPS, LANGUAGES, NAV_PROPS } from '@/app/com
 import { KPFooter, KPHeader } from '@kp-react-lib/kp-react-common';
 import '@kp-react-lib/kp-react-common/dist/index.css'
 import WebLogo from '@/app/components/shared/WebLogo';
+import { Toaster } from 'sonner';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
       <I18nextProvider i18n={i18n}>
           <KPHeader mainLogo={<WebLogo/>} mainTitle={'VA-CODE'} navbarProps={NAV_PROPS} drawerMenuProps={DRAWER_MENU_PROPS} langs={LANGUAGES} i18n={i18n}/>
           <App />
+          <Toaster/>
           <KPFooter props={FOOTER_PROPS} i18n={i18n}/>
       </I18nextProvider>
     </BrowserRouter>

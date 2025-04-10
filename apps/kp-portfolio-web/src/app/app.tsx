@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import i18n from '@/i18n';
 import KpVerOne from '@/app/components/projects/kp-ver-one/kp-ver-one';
 import KpVerTwo from '@/app/components/projects/kp-ver-two/kp-ver-two';
+import { toast } from 'sonner';
 
 export function App() {
   useEffect(() => {
@@ -20,6 +21,24 @@ export function App() {
     } else {
       i18n.changeLanguage('en');
     }
+
+    const handleLanguageChange = (lng: string) => {
+      if (lng === 'fr'){
+        toast("The French toggle is provided as a showcase of internationalization (i18n) support", {
+          position: 'top-left',
+          description: "Translations may be incomplete or not fully accurate, and some content might remain untranslated.",
+          closeButton: true,
+        })
+      }
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+
+    // Cleanup on component unmount
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+
   }, [i18n]);
   return (
       <Routes>

@@ -61,7 +61,7 @@ export function HomeWelcome({toggleRequest} : {toggleRequest:Dispatch<SetStateAc
             </Reveal>
           </div>
           <Reveal hiddenV = {{filter: 'blur(20px)', opacity: 0 }} visibleV = {{filter: 'blur(0px)', opacity: 1 }} className="flex gap-4 flex-col sm:flex-row">
-            <DotPrimaryButton onClick={() => {toggleRequest(true); navigate('/summary')}} text={t('home.primary.button')}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
+            <DotPrimaryButton onClick={() => {toggleRequest(true); navigate('/summary')}} text={t('home.primary.button')} offset={-0.03}><ArrowRight className="ml-2 h-4 w-4" /></DotPrimaryButton>
             <KPOutlineButton onClick={() => navigate('/freelance-projects')} text={t('home.secondary.button')}></KPOutlineButton>
           </Reveal>
         </div>
