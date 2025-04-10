@@ -375,5 +375,7 @@
   "project.update.development.alert.title": "Heads Up: Page Update Coming Soon",
   "project.update.development.alert.description": "This page is still under development and will be updated shortly with more detailed features, visuals, and improvements. Stay tuned!",
   "project.update.complete.alert.title": "Note: Updates Coming Soon",
-  "project.update.complete.alert.description": "This project is complete, but the page will be updated soon to include more details when time allows. Thanks for your patience!"
+  "project.update.complete.alert.description": "This project is complete, but the page will be updated soon to include more details when time allows. Thanks for your patience!",
+  "mobile.optimized.alert.title": "Best Viewed on a Bigger Screen",
+  "mobile.optimized.alert.content": "For the best experience, please view this site on a device with a bigger screen. Some features may not display correctly on smaller screens."
 }

@@ -49,7 +49,7 @@ export function ElasticCardDetail({logo, type, title, period, completed, fullsiz
 
           </div>
           <div className='flex justify-center z-50'>
-            <DotPrimaryButton text={t('freelance.projects.check.out')} onClick={reveal} offset={-0.1}/>
+            <DotPrimaryButton text={t('freelance.projects.check.out')} onClick={reveal} offset={-0.07}/>
           </div>
 
         </RevealCardDetail>):
@@ -57,10 +57,10 @@ export function ElasticCardDetail({logo, type, title, period, completed, fullsiz
           key='notfulsize' hiddenV={{opacity: 0, filter: 'blur(20px)'}} visibleV={{opacity: 1, filter: 'blur(0)'}}
           trigger={!fullsize} delay={0} duration={1}
           className={'absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col'}>
-          <div className='text-slate-50'>
-            <h4 className={'float-left clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{type}</h4>
-            <h2 className={'text-blue-200 float-left text-xl clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{title}</h2>
-            <h5 className={'float-left clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{period}</h5>
+          <div className='text-slate-50 hidden xl:block'>
+            <h4 className={'float-left clear-both inline-block text-sm 2xl:text-[16px] relative uppercase overflow-hidden mb-[0.3em]'}>{type}</h4>
+            <h2 className={'text-blue-200 float-left text-lg 2xl:text-xl clear-both inline-block relative uppercase overflow-hidden mb-[0.3em]'}>{title}</h2>
+            <h5 className={'float-left clear-both inline-block text-sm 2xl:text-[16px] relative uppercase overflow-hidden mb-[0.3em]'}>{period}</h5>
           </div>
         </RevealCardDetail>)}
     </>
